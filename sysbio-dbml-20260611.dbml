@@ -1,218 +1,347 @@
-// OMOP CDM 5.4 (subset) \+ custom extensions \+ governance table  
-// Shared ERD was created by pasting into https://dbdiagram.io
+// SysBio-CDM — harmonized schema reflecting the FAIRplex AMP reference implementation.
 //
-// ⚠️ PARTIALLY UPDATED 2026-06-12 — sysbioDDL.sql remains the authoritative schema; the paired
-//    PNG is STALE and must be regenerated from this DBML (paste into dbdiagram.io). Status:
-//    (1) PERSON: shown abbreviated (person_id only) with a Note — the full canonical shape, the
-//        sentinel-0 CHECK constraints, and the placeholder year_of_birth live in sysbioDDL.sql.
-//    (2) OBSERVATION_PERIOD: governed table (delete-guard + read filter, field-concept 1147044)
-//        is now included below, with a Ref to person.person_id.
+// Mirrors the OMOP CDM v5.4 query node implemented for the AMP reference deployment
+// (generated from its schema). OMOP core is standard v5.4. Build-specific points:
+//   * person is a DATA-FREE anchor — gender/race/ethnicity_concept_id and
+//     year_of_birth are pinned to 0 (CHECK); real demographics live as GOVERNED
+//     observation rows so record-level access controls them.
+//   * Record-level access is per-table: access_groups + user_access_groups, with a
+//     <table>_access join table per governed entity (condition_occurrence,
+//     procedure_occurrence, measurement, observation, specimen, files), enforced
+//     in-engine via Postgres row-level security. person, visit_occurrence,
+//     observation_period and the reference tables (concept/assay/cdm_source/
+//     fact_relationship + assay_* junctions) are ungoverned / always-accessible.
+//   * fact_relationship connects INTEGER-keyed records across domains. assay and
+//     files use integer surrogate PKs (assay_source_value / drs_id hold the human
+//     handle / locator) precisely so fact_relationship can reference them too.
+//   * files.drs_id resolves against a GA4GH DRS service (the query->download bridge).
+//   * assay models a wet-lab assay OR a computational pipeline; lineage is
+//     assay_to_specimen (wet-lab inputs) + assay_input_file (pipeline inputs),
+//     with file.assay_id as the output edge.
+//
+// Render: paste into https://dbdiagram.io
 
-Table person {  
-  person\_id integer \[pk\]  
-  Note: 'FULL canonical PERSON in this build (see sysbioDDL.sql). Only person\_id shown here for brevity. gender/race/ethnicity\_concept\_id are pinned to 0 (CHECK); year\_of\_birth is a placeholder. Real demographics live as governed OBSERVATION records.'  
+Table access_groups {
+  id SERIAL [pk]
+  code TEXT [not null]
+  name TEXT [not null]
+  description TEXT
+  program TEXT
+  disease_focus TEXT
+  dul TEXT
+  data_access_instructions TEXT
+  created_at TIMESTAMP(3) [not null]
 }
 
-Table observation\_period {
-  observation\_period\_id integer \[pk\]
-  person\_id integer \[not null\]
-  observation\_period\_start\_date date \[not null\]
-  observation\_period\_end\_date date \[not null\]
-  period\_type\_concept\_id integer \[not null\]
-  Note: 'Governed (field concept 1147044): delete\-guard \+ read filter'
+Table user_access_groups {
+  user_id TEXT [not null]
+  access_group_id INTEGER [not null]
+  granted_at TIMESTAMP(3) [not null]
+  granted_by TEXT
+  indexes {
+    (user_id, access_group_id) [pk]
+  }
 }
 
-Table visit\_occurrence {  
-  visit\_occurrence\_id integer \[pk\]  
-  person\_id integer \[not null\]  
-  visit\_concept\_id integer \[not null\]  
-  visit\_start\_date date \[not null\]  
-  visit\_start\_datetime timestamp  
-  visit\_end\_date date \[not null\]  
-  visit\_end\_datetime timestamp  
-  visit\_type\_concept\_id integer \[not null\]  
-  provider\_id integer  
-  care\_site\_id integer  
-  visit\_source\_value varchar  
-  visit\_source\_concept\_id integer  
-  admitted\_from\_concept\_id integer  
-  admitted\_from\_source\_value varchar  
-  discharged\_to\_concept\_id integer  
-  discharged\_to\_source\_value varchar  
-  preceding\_visit\_occurrence\_id integer  
+Table concept {
+  concept_id INTEGER [pk]
+  concept_name VARCHAR(255) [not null]
+  domain_id VARCHAR(20) [not null]
+  vocabulary_id VARCHAR(20) [not null]
+  concept_class_id VARCHAR(20) [not null]
+  standard_concept VARCHAR(1)
+  concept_code VARCHAR(50) [not null]
+  valid_start_date DATE [not null]
+  valid_end_date DATE [not null]
+  invalid_reason VARCHAR(1)
 }
 
-Table measurement {  
-  measurement\_id integer \[pk\]  
-  person\_id integer \[not null\]  
-  measurement\_concept\_id integer \[not null\]  
-  measurement\_date date \[not null\]  
-  measurement\_datetime timestamp  
-  measurement\_time varchar  
-  measurement\_type\_concept\_id integer \[not null\]  
-  operator\_concept\_id integer  
-  value\_as\_number numeric  
-  value\_as\_concept\_id integer  
-  unit\_concept\_id integer  
-  range\_low numeric  
-  range\_high numeric  
-  provider\_id integer  
-  visit\_occurrence\_id integer  
-  visit\_detail\_id integer  
-  measurement\_source\_value varchar  
-  measurement\_source\_concept\_id integer  
-  unit\_source\_value varchar  
-  unit\_source\_concept\_id integer  
-  value\_source\_value varchar  
-  measurement\_event\_id bigint \[note: 'polymorphic \- no FK; resolved case by case'\]  
-  meas\_event\_field\_concept\_id integer  
+Table person {
+  person_id INTEGER [pk]
+  gender_concept_id INTEGER [not null]
+  year_of_birth INTEGER [not null]
+  race_concept_id INTEGER [not null]
+  ethnicity_concept_id INTEGER [not null]
 }
 
-Table observation {  
-  observation\_id integer \[pk\]  
-  person\_id integer \[not null\]  
-  observation\_concept\_id integer \[not null\]  
-  observation\_date date \[not null\]  
-  observation\_datetime timestamp  
-  observation\_type\_concept\_id integer \[not null\]  
-  value\_as\_number numeric  
-  value\_as\_string varchar  
-  value\_as\_concept\_id integer  
-  qualifier\_concept\_id integer  
-  unit\_concept\_id integer  
-  provider\_id integer  
-  visit\_occurrence\_id integer  
-  visit\_detail\_id integer  
-  observation\_source\_value varchar  
-  observation\_source\_concept\_id integer  
-  unit\_source\_value varchar  
-  qualifier\_source\_value varchar  
-  value\_source\_value varchar  
-  observation\_event\_id bigint \[note: 'polymorphic \- no FK; resolved case by case'\]  
-  obs\_event\_field\_concept\_id integer  
+Table observation_period {
+  observation_period_id INTEGER [pk]
+  person_id INTEGER [not null]
+  observation_period_start_date DATE [not null]
+  observation_period_end_date DATE [not null]
+  period_type_concept_id INTEGER [not null]
 }
 
-Table condition\_occurrence {  
-  condition\_occurrence\_id integer \[pk\]  
-  person\_id integer \[not null\]  
-  condition\_concept\_id integer \[not null\]  
-  condition\_start\_date date \[not null\]  
-  condition\_start\_datetime timestamp  
-  condition\_end\_date date  
-  condition\_end\_datetime timestamp  
-  condition\_type\_concept\_id integer \[not null\]  
-  condition\_status\_concept\_id integer  
-  stop\_reason varchar  
-  provider\_id integer  
-  visit\_occurrence\_id integer  
-  visit\_detail\_id integer  
-  condition\_source\_value varchar  
-  condition\_source\_concept\_id integer  
-  condition\_status\_source\_value varchar  
+Table visit_occurrence {
+  visit_occurrence_id INTEGER [pk]
+  person_id INTEGER [not null]
+  visit_concept_id INTEGER [not null]
+  visit_start_date DATE [not null]
+  visit_start_datetime TIMESTAMP(3)
+  visit_end_date DATE [not null]
+  visit_end_datetime TIMESTAMP(3)
+  visit_type_concept_id INTEGER [not null]
+  provider_id INTEGER
+  care_site_id INTEGER
+  visit_source_value VARCHAR(50)
+  visit_source_concept_id INTEGER
+  admitted_from_concept_id INTEGER
+  admitted_from_source_value VARCHAR(50)
+  discharged_to_concept_id INTEGER
+  discharged_to_source_value VARCHAR(50)
+  preceding_visit_occurrence_id INTEGER
 }
 
-Table procedure\_occurrence {  
-  procedure\_occurrence\_id integer \[pk\]  
-  person\_id integer \[not null\]  
-  procedure\_concept\_id integer \[not null\]  
-  procedure\_date date \[not null\]  
-  procedure\_datetime timestamp  
-  procedure\_end\_date date  
-  procedure\_end\_datetime timestamp  
-  procedure\_type\_concept\_id integer \[not null\]  
-  modifier\_concept\_id integer  
-  quantity integer  
-  provider\_id integer  
-  visit\_occurrence\_id integer  
-  visit\_detail\_id integer  
-  procedure\_source\_value varchar  
-  procedure\_source\_concept\_id integer  
-  modifier\_source\_value varchar  
+Table condition_occurrence {
+  condition_occurrence_id INTEGER [pk]
+  person_id INTEGER [not null]
+  condition_concept_id INTEGER [not null]
+  condition_start_date DATE [not null]
+  condition_start_datetime TIMESTAMP(3)
+  condition_end_date DATE
+  condition_end_datetime TIMESTAMP(3)
+  condition_type_concept_id INTEGER [not null]
+  condition_status_concept_id INTEGER
+  stop_reason VARCHAR(20)
+  provider_id INTEGER
+  visit_occurrence_id INTEGER
+  visit_detail_id INTEGER
+  condition_source_value VARCHAR(50)
+  condition_source_concept_id INTEGER
+  condition_status_source_value VARCHAR(50)
 }
 
-Table specimen {  
-  specimen\_id integer \[pk\]  
-  person\_id integer \[not null\]  
-  specimen\_concept\_id integer \[not null\]  
-  specimen\_type\_concept\_id integer \[not null\]  
-  specimen\_date date \[not null\]  
-  specimen\_datetime timestamp  
-  quantity numeric  
-  unit\_concept\_id integer  
-  anatomic\_site\_concept\_id integer  
-  disease\_status\_concept\_id integer  
-  specimen\_source\_id varchar  
-  specimen\_source\_value varchar  
-  unit\_source\_value varchar  
-  anatomic\_site\_source\_value varchar  
-  disease\_status\_source\_value varchar  
+Table measurement {
+  measurement_id INTEGER [pk]
+  person_id INTEGER [not null]
+  measurement_concept_id INTEGER [not null]
+  measurement_date DATE [not null]
+  measurement_datetime TIMESTAMP(3)
+  measurement_time VARCHAR(10)
+  measurement_type_concept_id INTEGER [not null]
+  operator_concept_id INTEGER
+  value_as_number DECIMAL(65,30)
+  value_as_concept_id INTEGER
+  unit_concept_id INTEGER
+  range_low DECIMAL(65,30)
+  range_high DECIMAL(65,30)
+  provider_id INTEGER
+  visit_occurrence_id INTEGER
+  visit_detail_id INTEGER
+  measurement_source_value VARCHAR(50)
+  measurement_source_concept_id INTEGER
+  unit_source_value VARCHAR(50)
+  unit_source_concept_id INTEGER
+  value_source_value VARCHAR(50)
+  measurement_event_id INTEGER
+  meas_event_field_concept_id INTEGER
 }
 
-Table fact\_relationship {  
-  domain\_concept\_id\_1 integer \[not null\]  
-  fact\_id\_1 integer \[not null, note: 'polymorphic \- no FK; resolved case by case'\]  
-  domain\_concept\_id\_2 integer \[not null\]  
-  fact\_id\_2 integer \[not null, note: 'polymorphic \- no FK; resolved case by case'\]  
-  relationship\_concept\_id integer \[not null\]  
+Table observation {
+  observation_id INTEGER [pk]
+  person_id INTEGER [not null]
+  observation_concept_id INTEGER [not null]
+  observation_date DATE [not null]
+  observation_datetime TIMESTAMP(3)
+  observation_type_concept_id INTEGER [not null]
+  value_as_number DECIMAL(65,30)
+  value_as_string VARCHAR(60)
+  value_as_concept_id INTEGER
+  qualifier_concept_id INTEGER
+  unit_concept_id INTEGER
+  provider_id INTEGER
+  visit_occurrence_id INTEGER
+  visit_detail_id INTEGER
+  observation_source_value VARCHAR(50)
+  observation_source_concept_id INTEGER
+  unit_source_value VARCHAR(50)
+  qualifier_source_value VARCHAR(50)
+  value_source_value VARCHAR(50)
+  observation_event_id INTEGER
+  obs_event_field_concept_id INTEGER
 }
 
-Table cdm\_source {  
-  cdm\_source\_name varchar \[not null\]  
-  cdm\_source\_abbreviation varchar \[not null\]  
-  cdm\_holder varchar \[not null\]  
-  source\_description text  
-  source\_documentation\_reference varchar  
-  cdm\_etl\_reference varchar  
-  source\_release\_date date \[not null\]  
-  cdm\_release\_date date \[not null\]  
-  cdm\_version varchar  
-  cdm\_version\_concept\_id integer \[not null\]  
-  vocabulary\_version varchar \[not null\]  
-  Note: 'Standalone metadata \- no FK to clinical tables'  
+Table specimen {
+  specimen_id INTEGER [pk]
+  person_id INTEGER [not null]
+  specimen_concept_id INTEGER [not null]
+  specimen_type_concept_id INTEGER [not null]
+  specimen_date DATE [not null]
+  specimen_datetime TIMESTAMP(3)
+  quantity DECIMAL(65,30)
+  unit_concept_id INTEGER
+  anatomic_site_concept_id INTEGER
+  disease_status_concept_id INTEGER
+  specimen_source_id VARCHAR(50)
+  specimen_source_value VARCHAR(50)
+  unit_source_value VARCHAR(50)
+  anatomic_site_source_value VARCHAR(50)
+  disease_status_source_value VARCHAR(50)
 }
 
-Table assay {  
-  assay\_id varchar \[pk\]  
-  assay\_type varchar  
-  platform varchar  
-  suspension\_type varchar  
-  analyte\_type varchar  
+Table procedure_occurrence {
+  procedure_occurrence_id INTEGER [pk]
+  person_id INTEGER [not null]
+  procedure_concept_id INTEGER [not null]
+  procedure_date DATE [not null]
+  procedure_datetime TIMESTAMP(3)
+  procedure_end_date DATE
+  procedure_end_datetime TIMESTAMP(3)
+  procedure_type_concept_id INTEGER [not null]
+  modifier_concept_id INTEGER
+  quantity INTEGER
+  provider_id INTEGER
+  visit_occurrence_id INTEGER
+  visit_detail_id INTEGER
+  procedure_source_value VARCHAR(50)
+  procedure_source_concept_id INTEGER
+  modifier_source_value VARCHAR(50)
 }
 
-Table file\_asset {  
-  file\_asset\_id varchar \[pk\]  
-  assay\_id varchar  
-  derived\_from\_file\_asset\_id varchar  
-  file\_name varchar  
-  file\_format varchar  
-  file\_role varchar  
-  uri varchar  
-  access\_level varchar  
+Table fact_relationship {
+  domain_concept_id_1 INTEGER [not null]
+  fact_id_1 INTEGER [not null]
+  domain_concept_id_2 INTEGER [not null]
+  fact_id_2 INTEGER [not null]
+  relationship_concept_id INTEGER [not null]
+  indexes {
+    (domain_concept_id_1, fact_id_1, domain_concept_id_2, fact_id_2, relationship_concept_id) [pk]
+  }
 }
 
-Table group\_access {  
-  field\_concept\_id integer  
-  record\_id bigint \[note: 'polymorphic \- no FK; resolved case by case'\]  
-  grant\_group varchar  
-  person\_id integer  
-  indexes {  
-    (field\_concept\_id, record\_id, grant\_group) \[pk\]  
-  }  
+Table cdm_source {
+  cdm_source_name TEXT [pk]
+  cdm_source_abbreviation TEXT [not null]
+  cdm_holder TEXT [not null]
+  source_description TEXT
+  source_documentation_reference TEXT
+  cdm_etl_reference TEXT
+  source_release_date DATE [not null]
+  cdm_release_date DATE [not null]
+  cdm_version TEXT
+  cdm_version_concept_id INTEGER [not null]
+  vocabulary_version TEXT [not null]
 }
 
-// \---- Relationships (real FKs only) \----  
-Ref: observation\_period.person\_id \> person.person\_id
-Ref: visit\_occurrence.person\_id \> person.person\_id  
-Ref: visit\_occurrence.preceding\_visit\_occurrence\_id \> visit\_occurrence.visit\_occurrence\_id  
-Ref: measurement.person\_id \> person.person\_id  
-Ref: measurement.visit\_occurrence\_id \> visit\_occurrence.visit\_occurrence\_id  
-Ref: observation.person\_id \> person.person\_id  
-Ref: observation.visit\_occurrence\_id \> visit\_occurrence.visit\_occurrence\_id  
-Ref: condition\_occurrence.person\_id \> person.person\_id  
-Ref: condition\_occurrence.visit\_occurrence\_id \> visit\_occurrence.visit\_occurrence\_id  
-Ref: procedure\_occurrence.person\_id \> person.person\_id  
-Ref: procedure\_occurrence.visit\_occurrence\_id \> visit\_occurrence.visit\_occurrence\_id  
-Ref: specimen.person\_id \> person.person\_id  
-Ref: file\_asset.assay\_id \> assay.assay\_id  
-Ref: file\_asset.derived\_from\_file\_asset\_id \> file\_asset.file\_asset\_id  
-Ref: group\_access.person\_id \> person.person\_id
+Table files {
+  file_id INTEGER [pk]
+  file_name TEXT [not null]
+  current_version INTEGER
+  assay_id INTEGER
+  file_role TEXT
+  study TEXT
+  "grant" TEXT
+  array_type TEXT
+  analysis_type TEXT
+  biosample_type TEXT
+  tissue TEXT
+  cell_type TEXT
+  species TEXT
+  processing_status TEXT
+  file_format TEXT
+  file_size_bytes BIGINT
+  created_on TIMESTAMP(3)
+  modified_on TIMESTAMP(3)
+  drs_id TEXT [not null]
+}
+
+Table assay {
+  assay_id INTEGER [pk]
+  assay_source_value TEXT
+  assay_type TEXT [not null]
+  platform TEXT [not null]
+  suspension_type TEXT
+  analyte_type TEXT
+  analysis_pipeline TEXT
+}
+
+Table assay_to_specimen {
+  assay_id INTEGER [not null]
+  specimen_id INTEGER [not null]
+  indexes {
+    (assay_id, specimen_id) [pk]
+  }
+}
+
+Table assay_input_file {
+  assay_id INTEGER [not null]
+  file_id INTEGER [not null]
+  indexes {
+    (assay_id, file_id) [pk]
+  }
+}
+
+Table condition_occurrence_access {
+  condition_occurrence_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (condition_occurrence_id, access_group_id) [pk]
+  }
+}
+
+Table procedure_occurrence_access {
+  procedure_occurrence_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (procedure_occurrence_id, access_group_id) [pk]
+  }
+}
+
+Table measurement_access {
+  measurement_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (measurement_id, access_group_id) [pk]
+  }
+}
+
+Table observation_access {
+  observation_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (observation_id, access_group_id) [pk]
+  }
+}
+
+Table specimen_access {
+  specimen_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (specimen_id, access_group_id) [pk]
+  }
+}
+
+Table file_access {
+  file_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (file_id, access_group_id) [pk]
+  }
+}
+
+// ---- Relationships (real FKs only) ----
+Ref: user_access_groups.access_group_id > access_groups.id
+Ref: observation_period.person_id > person.person_id
+Ref: visit_occurrence.person_id > person.person_id
+Ref: condition_occurrence.person_id > person.person_id
+Ref: measurement.person_id > person.person_id
+Ref: observation.person_id > person.person_id
+Ref: specimen.person_id > person.person_id
+Ref: procedure_occurrence.person_id > person.person_id
+Ref: files.assay_id > assay.assay_id
+Ref: assay_to_specimen.assay_id > assay.assay_id
+Ref: assay_to_specimen.specimen_id > specimen.specimen_id
+Ref: assay_input_file.assay_id > assay.assay_id
+Ref: assay_input_file.file_id > files.file_id
+Ref: condition_occurrence_access.condition_occurrence_id > condition_occurrence.condition_occurrence_id
+Ref: condition_occurrence_access.access_group_id > access_groups.id
+Ref: procedure_occurrence_access.procedure_occurrence_id > procedure_occurrence.procedure_occurrence_id
+Ref: procedure_occurrence_access.access_group_id > access_groups.id
+Ref: measurement_access.measurement_id > measurement.measurement_id
+Ref: measurement_access.access_group_id > access_groups.id
+Ref: observation_access.observation_id > observation.observation_id
+Ref: observation_access.access_group_id > access_groups.id
+Ref: specimen_access.specimen_id > specimen.specimen_id
+Ref: specimen_access.access_group_id > access_groups.id
+Ref: file_access.file_id > files.file_id
+Ref: file_access.access_group_id > access_groups.id
