@@ -1,0 +1,781 @@
+concept_id	concept_name	domain_id	vocabulary_id	concept_class_id	standard_concept	concept_code	valid_start_date	valid_end_date	invalid_reason
+8	Visit	Metadata	Domain	Domain		OMOP generated	1970-01-01	2099-12-31	
+10	Procedure	Metadata	Domain	Domain		OMOP generated	1970-01-01	2099-12-31	
+21	Measurement	Metadata	Domain	Domain		OMOP generated	1970-01-01	2099-12-31	
+27	Observation	Metadata	Domain	Domain		OMOP generated	1970-01-01	2099-12-31	
+36	Specimen	Metadata	Domain	Domain		OMOP generated	1970-01-01	2099-12-31	
+8507	MALE	Gender	Gender	Gender	S	M	1970-01-01	2099-12-31	
+8527	White	Race	Race	Race	S	5	1970-01-01	2099-12-31	
+8532	FEMALE	Gender	Gender	Gender	S	F	1970-01-01	2099-12-31	
+8587	milliliter	Unit	UCUM	Unit	S	mL	1970-01-01	2099-12-31	
+8615	Assisted Living Facility	Visit	CMS Place of Service	Visit	S	13	1970-01-01	2099-12-31	
+8809	Independent Laboratory	Visit	CMS Place of Service	Visit	S	81	1970-01-01	2099-12-31	
+9202	Outpatient Visit	Visit	Visit	Visit	S	OP	1970-01-01	2099-12-31	
+9401	section	Unit	UCUM	Unit	S	[sct]	1970-01-01	2099-12-31	
+9448	year	Unit	UCUM	Unit	S	a	1970-01-01	2099-12-31	
+9665	microliter	Unit	UCUM	Unit	S	uL	1970-01-01	2099-12-31	
+32036	Laboratory Visit	Visit	Visit	Visit	S	OMOP4822461	1970-01-01	2099-12-31	
+32416	Laboratory Genetics and Genomics	Provider	ABMS	Physician Specialty	S	OMOP4821995	1970-01-01	2099-12-31	
+32531	Treatment Regimen	Episode	Episode	Treatment	S	OMOP4822256	1970-01-01	2099-12-31	
+32533	Disease Episode	Episode	Episode	Episode of Care	S	OMOP4822254	1970-01-01	2099-12-31	
+32553	Includes sub-specimen (SNOMED Vet)	Metadata	Relationship	Relationship		OMOP generated	1970-01-01	2099-12-31	
+32554	Sub-specimen of (SNOMED Vet)	Metadata	Relationship	Relationship		OMOP generated	1970-01-01	2099-12-31	
+32668	Measurement to Specimen	Relationship	Relationship	Relationship	S	OMOP5217056	1970-01-01	2099-12-31	
+32669	Specimen to Measurement	Relationship	Relationship	Relationship	S	OMOP5217057	1970-01-01	2099-12-31	
+32815	Death Certificate	Type Concept	Type Concept	Type Concept	S	OMOP4976888	2020-08-20	2099-12-31	
+32856	Lab	Type Concept	Type Concept	Type Concept	S	OMOP4976929	2020-08-20	2099-12-31	
+32865	Patient self-report	Type Concept	Type Concept	Type Concept	S	OMOP4976938	2020-08-20	2099-12-31	
+32879	Registry	Type Concept	Type Concept	Type Concept	S	OMOP4976952	2020-08-20	2099-12-31	
+32883	Survey	Type Concept	Type Concept	Type Concept	S	OMOP4976956	2020-08-20	2099-12-31	
+32890	Admission diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976960	2020-08-20	2099-12-31	
+32891	Cause of death	Condition Status	Condition Status	Condition Status	S	OMOP4976961	2020-08-20	2099-12-31	
+32892	Condition to be diagnosed by procedure	Condition Status	Condition Status	Condition Status	S	OMOP4976962	2020-08-20	2099-12-31	
+32893	Confirmed diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976963	2020-08-20	2099-12-31	
+32894	Contributory cause of death	Condition Status	Condition Status	Condition Status	S	OMOP4976964	2020-08-20	2099-12-31	
+32895	Death diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976965	2020-08-20	2099-12-31	
+32896	Discharge diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976966	2020-08-20	2099-12-31	
+32897	Immediate cause of death	Condition Status	Condition Status	Condition Status	S	OMOP4976967	2020-08-20	2099-12-31	
+32898	Postoperative diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976968	2020-08-20	2099-12-31	
+32899	Preliminary diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976969	2020-08-20	2099-12-31	
+32900	Preoperative diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976970	2020-08-20	2099-12-31	
+32901	Primary admission diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976971	2020-08-20	2099-12-31	
+32902	Primary diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976972	2020-08-20	2099-12-31	
+32903	Primary discharge diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976973	2020-08-20	2099-12-31	
+32904	Primary referral diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976974	2020-08-20	2099-12-31	
+32905	Referral diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976975	2020-08-20	2099-12-31	
+32906	Resolved condition	Condition Status	Condition Status	Condition Status	S	OMOP4976976	2020-08-20	2099-12-31	
+32907	Secondary admission diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976977	2020-08-20	2099-12-31	
+32908	Secondary diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976978	2020-08-20	2099-12-31	
+32909	Secondary discharge diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976979	2020-08-20	2099-12-31	
+32910	Secondary referral diagnosis	Condition Status	Condition Status	Condition Status	S	OMOP4976980	2020-08-20	2099-12-31	
+32911	Underlying cause of death	Condition Status	Condition Status	Condition Status	S	OMOP4976981	2020-08-20	2099-12-31	
+32948	Stable Disease	Episode	Episode	Disease Dynamic	S	OMOP4997720	1970-01-01	2099-12-31	
+32949	Progression	Episode	Episode	Disease Dynamic	S	OMOP4997721	1970-01-01	2099-12-31	
+73754	Restless legs	Condition	SNOMED	Disorder	S	32914008	2002-01-31	2099-12-31	
+75635	Cramp	Condition	SNOMED	Clinical Finding	S	55300003	2002-01-31	2099-12-31	
+77074	Joint pain	Condition	SNOMED	Clinical Finding	S	57676002	2002-01-31	2099-12-31	
+134057	Disorder of cardiovascular system	Condition	SNOMED	Disorder	S	49601007	2002-01-31	2099-12-31	
+313459	Sleep apnea	Condition	SNOMED	Disorder	S	73430006	2002-01-31	2099-12-31	
+316866	Hypertensive disorder	Condition	SNOMED	Disorder	S	38341003	2002-01-31	2099-12-31	
+319041	Orthostatic hypotension	Condition	SNOMED	Disorder	S	28651003	2002-01-31	2099-12-31	
+376337	Disorder of nervous system	Condition	SNOMED	Disorder	S	118940003	2002-01-31	2099-12-31	
+377535	Sleep walking disorder	Condition	SNOMED	Disorder	S	80495009	2002-01-31	2099-12-31	
+378419	Alzheimer's disease	Condition	SNOMED	Disorder	S	26929004	2002-01-31	2099-12-31	
+381270	Parkinson's disease	Condition	SNOMED	Disorder	S	49049000	2002-01-31	2099-12-31	
+381316	Cerebrovascular accident	Condition	SNOMED	Disorder	S	230690007	2002-01-31	2099-12-31	
+433031	Hallucinations	Condition	SNOMED	Clinical Finding	S	7011001	2002-01-31	2099-12-31	
+434633	Disorder of autonomic nervous system	Condition	SNOMED	Disorder	S	15241006	2002-01-31	2099-12-31	
+436073	Psychotic disorder	Condition	SNOMED	Disorder	S	69322001	2002-01-31	2099-12-31	
+436100	Narcolepsy	Condition	SNOMED	Disorder	S	60380001	2002-01-31	2099-12-31	
+436670	Metabolic disease	Condition	SNOMED	Disorder	S	75934005	2002-01-31	2099-12-31	
+439007	REM sleep behavior disorder	Condition	SNOMED	Disorder	S	415238003	2005-01-31	2099-12-31	
+439147	Amnesia	Condition	SNOMED	Clinical Finding	S	48167000	2002-01-31	2099-12-31	
+444100	Mood disorder	Condition	SNOMED	Disorder	S	46206005	2002-01-31	2099-12-31	
+581410	Observation to Measurement	Relationship	Relationship	Relationship	S	OMOP5217058	1970-01-01	2099-12-31	
+581411	Measurement to Observation	Relationship	Relationship	Relationship	S	OMOP5217059	1970-01-01	2099-12-31	
+581436	Parent to Child Measurement	Relationship	Relationship	Relationship	S	OMOP5217060	1970-01-01	2099-12-31	
+581437	Child to Parent Measurement	Relationship	Relationship	Relationship	S	OMOP5217061	1970-01-01	2099-12-31	
+596878	Please specify organ.	Observation	PPI	Question	S	otherorgan_freetextbox	2021-04-01	2099-12-31	
+596879	Please specify tissue.	Observation	PPI	Question	S	othertissue_freetextbox	2021-04-01	2099-12-31	
+600632	Impaired concentration	Condition	SNOMED	Clinical Finding	S	1144748009	2021-07-31	2099-12-31	
+602279	Specimen collection procedure	Observation	SNOMED	Observable Entity	S	2620001000004108	2021-07-31	2099-12-31	
+608114	Molecular nucleic acid amplification technique	Observation	SNOMED	Qualifier Value	S	1156878000	2021-07-31	2099-12-31	
+618771	Clinical trial arm	Observation	SNOMED	Observable Entity	S	876783001	2021-01-31	2099-12-31	
+618898	Blood specimen in blood culture bottle	Specimen	SNOMED	Specimen	S	878861003	2021-01-31	2099-12-31	
+706391	Note	Meas Value	LOINC	Doc Kind	S	LP173418-7	2018-06-15	2099-12-31	
+713134	Family history with explicit context pertaining to grandparent	Observation	OMOP Extension	Context-dependent	S	OMOP5160858	2021-12-10	2099-12-31	
+713135	Family history with explicit context pertaining to cousin	Observation	OMOP Extension	Context-dependent	S	OMOP5160859	2021-12-10	2099-12-31	
+713136	Family history with explicit context pertaining to sibling	Observation	OMOP Extension	Context-dependent	S	OMOP5160860	2021-12-10	2099-12-31	
+713137	Family history with explicit context pertaining to child	Observation	OMOP Extension	Context-dependent	S	OMOP5160857	2021-12-10	2099-12-31	
+734306	Initial Diagnosis	Measurement	Cancer Modifier	Extension/Invasion	S	init_diag	2022-09-09	2099-12-31	
+762635	Bloody stool specimen	Specimen	SNOMED	Specimen	S	429901000124102	2012-09-01	2099-12-31	
+762637	Bloody fluid feces specimen	Specimen	SNOMED	Specimen	S	429921000124107	2012-09-01	2099-12-31	
+763463	Social support	Observation	SNOMED	Qualifier Value	S	441141000124101	2014-03-01	2099-12-31	
+764128	Pre-partum vaginal blood specimen	Specimen	SNOMED	Specimen	S	451091000124107	2016-09-01	2099-12-31	
+764477	Cultured cells specimen	Specimen	SNOMED	Specimen	S	455541000124107	2018-03-01	2099-12-31	
+764569	Donor pre-apheresis blood specimen	Specimen	SNOMED	Specimen	S	456731000124104	2018-03-01	2099-12-31	
+789578	levodopa	Drug	RxNorm	Ingredient	S	6375	1970-01-01	2099-12-31	
+836812	Including yourself, who in your family has had Parkinson's disease? Select all that apply.	Observation	PPI	Question	S	NervousCondition_Parkinsons_yes	2022-04-07	2099-12-31	
+958783	Standing Position	Spec Anatomic Site	MeSH	Main Heading		D000078783	2018-11-05	2099-12-31	
+1001762	Liver steatosis grade in Serum or Plasma Qualitative	Measurement	LOINC	Lab Test	S	93696-3	2019-12-13	2099-12-31	
+1073466	Nucleic acid sequencing technique	Observation	SNOMED	Qualifier Value	S	1304162005	2024-03-01	2099-12-31	
+1074531	Lymphoblast specimen	Specimen	SNOMED	Specimen	S	142261000146106	2024-05-01	2099-12-31	
+1074624	Monocyte specimen	Specimen	SNOMED	Specimen	S	290211000146104	2024-05-01	2099-12-31	
+1094239	Was on medication	Meas Value	LOINC	Answer	S	LA34443-4	1970-01-01	2099-12-31	
+1147026	person.person_id	Metadata	CDM	Field	S	CDM82	2014-11-11	2099-12-31	
+1147044	observation_period.observation_period_id	Metadata	CDM	Field	S	CDM100	2014-11-11	2099-12-31	
+1147049	specimen.specimen_id	Metadata	CDM	Field	S	CDM105	2014-11-11	2099-12-31	
+1147051	specimen.specimen_concept_id	Metadata	CDM	Field	S	CDM107	2014-11-11	2099-12-31	
+1147059	specimen.specimen_source_id	Metadata	CDM	Field	S	CDM115	2014-11-11	2099-12-31	
+1147070	visit_occurrence.visit_occurrence_id	Metadata	CDM	Field	S	CDM126	2014-11-11	2099-12-31	
+1147082	procedure_occurrence.procedure_occurrence_id	Metadata	CDM	Field	S	CDM138	2014-11-11	2099-12-31	
+1147094	drug_exposure.drug_exposure_id	Metadata	CDM	Field	S	CDM150	2014-11-11	2099-12-31	
+1147115	device_exposure.device_exposure_id	Metadata	CDM	Field	S	CDM171	2014-11-11	2099-12-31	
+1147127	condition_occurrence.condition_occurrence_id	Metadata	CDM	Field	S	CDM183	2014-11-11	2099-12-31	
+1147138	measurement.measurement_id	Metadata	CDM	Field	S	CDM194	2014-11-11	2099-12-31	
+1147140	measurement.measurement_concept_id	Metadata	CDM	Field	S	CDM196	2014-11-11	2099-12-31	
+1147156	note.note_id	Metadata	CDM	Field	S	CDM212	2014-11-11	2099-12-31	
+1147165	observation.observation_id	Metadata	CDM	Field	S	CDM221	2014-11-11	2099-12-31	
+1147201	provider.provider_id	Metadata	CDM	Field	S	CDM257	2014-11-11	2099-12-31	
+1147301	procedure_occurrence	Metadata	CDM	Table	S	CDM357	2014-11-11	2099-12-31	
+1147304	observation	Metadata	CDM	Table	S	CDM360	2014-11-11	2099-12-31	
+1147305	device_exposure	Metadata	CDM	Table	S	CDM361	2014-11-11	2099-12-31	
+1147306	specimen	Metadata	CDM	Table	S	CDM362	2014-11-11	2099-12-31	
+1147312	death	Metadata	CDM	Table	S	CDM368	2014-11-11	2099-12-31	
+1147314	person	Metadata	CDM	Table	S	CDM370	2014-11-11	2099-12-31	
+1147317	note	Metadata	CDM	Table	S	CDM373	2014-11-11	2099-12-31	
+1147321	observation_period	Metadata	CDM	Table	S	CDM377	2014-11-11	2099-12-31	
+1147325	cdm_source	Metadata	CDM	Table	S	CDM381	2014-11-11	2099-12-31	
+1147330	measurement	Metadata	CDM	Table	S	CDM386	2014-11-11	2099-12-31	
+1147332	visit_occurrence	Metadata	CDM	Table	S	CDM388	2014-11-11	2099-12-31	
+1147333	condition_occurrence	Metadata	CDM	Table	S	CDM389	2014-11-11	2099-12-31	
+1147339	drug_exposure	Metadata	CDM	Table	S	CDM395	2014-11-11	2099-12-31	
+1147624	visit_detail.visit_detail_id	Metadata	CDM	Field	S	CDM674	2018-01-03	2099-12-31	
+1147637	visit_detail	Metadata	CDM	Table	S	CDM687	2018-01-03	2099-12-31	
+1147657	cohort.cohort_definition_id	Metadata	CDM	Field	S	CDM703	2018-10-11	2099-12-31	
+1176306	Unique identifier [Identifier] of Initial sample	Measurement	LOINC	Lab Test	S	89873-4	2018-12-14	2099-12-31	
+1260024	Temporal orientation - current year during assessment period [CMS Assessment]	Observation	LOINC	Survey	S	103697-9	2024-02-27	2099-12-31	
+1260032	Temporal orientation - current day of the week [CMS Assessment]	Observation	LOINC	Survey	S	103703-5	2024-02-27	2099-12-31	
+1260104	Temporal orientation - current month during assessment period [CMS Assessment]	Observation	LOINC	Survey	S	103698-7	2024-02-27	2099-12-31	
+1340510	Progression of Alzheimer's disease	Condition	OMOP Extension	Disorder	S	OMOP5166165	2022-05-06	2099-12-31	
+1384430	Other: Other Conditions	Observation	PPI	Question	S	Other_OtherConditions	2018-10-09	2099-12-31	
+1568095	Alcohol related disorders	Condition	ICD10CM	3-char nonbill code		F10	2012-01-01	2099-12-31	
+1570832	Muscle spasm	Condition	ICD10CM	5-char nonbill code		M62.83	2012-01-01	2099-12-31	
+1586156	Hispanic: Hispanic Specific	Observation	PPI	Question	S	Hispanic_HispanicSpecific	2017-05-17	2099-12-31	
+1616447	Specimen source [Identifier] from Donor	Measurement	LOINC	Lab Test	S	96830-5	2021-08-23	2099-12-31	
+1616659	Worried about falling	Observation	LOINC	Clinical Observation	S	97878-3	2021-08-23	2099-12-31	
+1617710	How often have you used any tobacco product in past 12 months	Observation	LOINC	Clinical Observation	S	96842-0	2021-08-23	2099-12-31	
+1620476	ApoE phenotype E3/E4	Meas Value	LOINC	Answer	S	LA32567-2	1970-01-01	2099-12-31	
+1620613	ApoE phenotype E4/E4	Meas Value	LOINC	Answer	S	LA32568-0	1970-01-01	2099-12-31	
+1620858	ApoE phenotype E2/E4	Meas Value	LOINC	Answer	S	LA32566-4	1970-01-01	2099-12-31	
+1620859	ApoE phenotype E2/E2	Meas Value	LOINC	Answer	S	LA32563-1	1970-01-01	2099-12-31	
+1621052	ApoE phenotype E3/E3 (wild type)	Meas Value	LOINC	Answer	S	LA32565-6	1970-01-01	2099-12-31	
+1621144	ApoE phenotype E2/E3	Meas Value	LOINC	Answer	S	LA32564-9	1970-01-01	2099-12-31	
+1703891	Do you worry more than most people about being embarrassed, looking stupid, or being judged by other people?	Observation	PPI	Question	S	pmi_3	2024-02-21	2099-12-31	
+1761789	Access to review healthcare data	Observation	LOINC	Survey	S	100926-5	2022-08-08	2099-12-31	
+1988354	Diagnosis type	Observation	LOINC	Clinical Observation	S	99494-7	2022-02-16	2099-12-31	
+1988369	Recorded sex or gender	Observation	LOINC	Clinical Observation	S	99502-7	2022-02-16	2099-12-31	
+1989000	Worry about the future since illness	Observation	LOINC	Survey	S	98576-2	2022-02-16	2099-12-31	
+1989567	Condition clinical status	Observation	LOINC	Clinical Observation	S	99493-9	2022-02-16	2099-12-31	
+1989817	Autopsy diagnosis	Meas Value	LOINC	Answer	S	LA32793-4	1970-01-01	2099-12-31	
+1989954	Muscle or body aches	Meas Value	LOINC	Answer	S	LA33099-5	1970-01-01	2099-12-31	
+1989984	Lack of support	Meas Value	LOINC	Answer	S	LA32587-0	1970-01-01	2099-12-31	
+1989987	At rest	Meas Value	LOINC	Answer	S	LA32617-5	1970-01-01	2099-12-31	
+2212019	Brain imaging, positron emission tomography (PET); perfusion evaluation	Procedure	CPT4	CPT4	S	78609	1970-01-01	2099-12-31	
+2213558	Psychiatric evaluation of hospital records, other psychiatric reports, psychometric and/or projective tests, and other accumulated data for medical diagnostic purposes	Procedure	CPT4	CPT4	S	90885	1970-01-01	2099-12-31	
+3003891	Specimen preparation [Type]	Measurement	LOINC	Lab Test	S	8100-0	1970-01-01	2099-12-31	
+3006309	Institution data source Registry message	Measurement	LOINC	Clinical Observation	S	21829-7	1970-01-01	2099-12-31	
+3011498	APOE gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal	Measurement	LOINC	Lab Test	S	21619-2	1970-01-01	2099-12-31	
+3015746	Specimen source identified	Measurement	LOINC	Lab Test	S	31208-2	2002-05-03	2099-12-31	
+3017278	Referral lab test name	Measurement	LOINC	Lab Test	S	19145-2	1970-01-01	2099-12-31	
+3018196	Informed consent obtained	Observation	LOINC	Clinical Observation	S	19826-7	1970-01-01	2099-12-31	
+3018323	Volume of Specimen	Measurement	LOINC	Lab Test	S	3169-0	1970-01-01	2099-12-31	
+3020366	Weight of Tissue	Measurement	LOINC	Lab Test	S	29638-4	2001-05-15	2099-12-31	
+3022304	Age	Observation	LOINC	Clinical Observation	S	30525-0	2001-10-16	2099-12-31	
+3026893	Collection duration of Specimen	Measurement	LOINC	Lab Test	S	30211-7	2001-09-28	2099-12-31	
+3027199	History of Alcohol use	Observation	LOINC	Clinical Observation	S	11331-6	1997-07-31	2099-12-31	
+3029139	APOE gene alleles e2 and e3 and e4 [Identifier] in Blood or Tissue by Molecular genetics method Nominal	Measurement	LOINC	Lab Test	S	42315-2	2005-08-31	2099-12-31	
+3029815	Collection interval from baseline of Unspecified specimen	Measurement	LOINC	Lab Test	S	50220-3	2007-09-11	2099-12-31	
+3030243	Pathologist interpretation of Specimen tests	Measurement	LOINC	Lab Test	S	50595-8	2007-10-08	2099-12-31	
+3031465	APOE gene allele 1 [Identifier] in Blood or Tissue by Molecular genetics method	Measurement	LOINC	Lab Test	S	34731-0	2003-11-04	2099-12-31	
+3031585	Age of Blood specimen	Measurement	LOINC	Lab Test	S	49546-5	2007-07-09	2099-12-31	
+3031632	Fasting status - Reported	Observation	LOINC	Clinical Observation	S	49541-6	2007-07-09	2099-12-31	
+3032354	APOE gene allele 2 [Identifier] in Blood or Tissue by Molecular genetics method	Measurement	LOINC	Lab Test	S	34732-8	2003-11-04	2099-12-31	
+3034297	Age at specimen collection	Observation	LOINC	Clinical Observation	S	35659-2	1970-01-01	2099-12-31	
+3034932	Number of specimens received	Measurement	LOINC	Lab Test	S	42186-7	2005-08-15	2099-12-31	
+3038421	Age at death	Observation	LOINC	Clinical Observation	S	39016-1	2005-02-14	2099-12-31	
+3042537	Diagnosis ICD code [Identifier]	Observation	LOINC	Clinical Observation	S	52797-8	2008-04-11	2099-12-31	
+3045429	Collection date of Specimen	Observation	LOINC	Clinical Observation	S	33882-2	2003-03-17	2099-12-31	
+3046853	Race	Observation	LOINC	Clinical Observation	S	32624-9	1970-01-01	2099-12-31	
+3046931	Change in cognitive status [Minimum Data Set]	Observation	LOINC	Survey	S	45497-5	1970-01-01	2099-12-31	
+3046965	Sex	Observation	LOINC	Clinical Observation	S	46098-0	1970-01-01	2099-12-31	
+3048270	Information source	Measurement	LOINC	Clinical Observation	S	48766-0	1970-01-01	2099-12-31	
+3048520	Genomic source class [Type]	Measurement	LOINC	Lab Test	S	48002-0	1970-01-01	2099-12-31	
+3048563	Fibrosis stage	Measurement	LOINC	Lab Test	S	48794-2	1970-01-01	2099-12-31	
+3053159	Age group	Observation	LOINC	Clinical Observation	S	46251-5	1970-01-01	2099-12-31	
+3053213	Specimen source [Identifier] of Body fluid	Measurement	LOINC	Lab Test	S	47938-6	2006-12-12	2099-12-31	
+3168054	Consortium to Establish Registry for Alzheimer's Disease assessment tool	Measurement	Nebraska Lexicon	Staging / Scales	S	860231000004107	2019-03-26	2099-12-31	
+3170911	Thal phase staging of amyloid plaques	Measurement	Nebraska Lexicon	Staging / Scales	S	839761000004109	2019-03-26	2099-12-31	
+3172402	CERAD score for the extent of presence of diffuse plaques in the neocortex	Observation	Nebraska Lexicon	Observable Entity	S	860201000004103	2019-03-26	2099-12-31	
+3172933	Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain	Observation	Nebraska Lexicon	Observable Entity	S	757761000004101	2019-03-26	2099-12-31	
+3184143	Folstein Mini-mental State Examination: Is patient oriented to season?	Observation	Nebraska Lexicon	Observable Entity	S	1126401000004102	2019-03-26	2099-12-31	
+3184819	Muscle jerks in sleep	Condition	Nebraska Lexicon	Clinical Finding	S	22050001000004100	2016-01-28	2099-12-31	
+3185659	Lewy Body Dementia Association criteria for diagnosis of LBD	Measurement	Nebraska Lexicon	Staging / Scales	S	154871000004103	2019-08-15	2099-12-31	
+3186797	Presence of spongiosis on autopsy examination of neocortex of brain	Observation	Nebraska Lexicon	Observable Entity	S	1331251000004101	2019-05-22	2099-12-31	
+3187187	Braak pathology staging for neurofibrillary degeneration in brain	Measurement	Nebraska Lexicon	Staging / Scales	S	829441000004102	2019-03-26	2099-12-31	
+3188920	DLB consortium neuropathologic criteria for diagnosis of Lewy Body Dementia total score	Observation	Nebraska Lexicon	Observable Entity	S	154881000004100	2019-08-15	2099-12-31	
+3190069	Braak pathology staging for Lewy body progression in Parkinsons disease	Measurement	Nebraska Lexicon	Staging / Scales	S	143361000004101	2019-08-15	2099-12-31	
+3197418	Has data value	Observation	Nebraska Lexicon	Attribute	S	1484821000004109	2016-01-26	2099-12-31	
+3197658	Specimen preparation technique	Observation	Nebraska Lexicon	Attribute	S	1400001000004103	2018-01-25	2099-12-31	
+3236863	Currently	Observation	Nebraska Lexicon	Qualifier Value		15240007	2002-01-31	2099-12-31	
+3519134	CERAD scoring for presence of neuritic plaques	Measurement	Nebraska Lexicon	Staging / Scales	S	839711000004106	2019-03-26	2099-12-31	
+3654978	Assessment using University of Pennsylvania Smell Identification Test	Measurement	SNOMED	Procedure	S	840548001	2020-07-31	2099-12-31	
+3655499	Cutaneous Dermatomyositis Disease Area and Severity Index	Measurement	SNOMED	Staging / Scales	S	865924008	2020-07-31	2099-12-31	
+3661514	Specimen collection for biobank	Procedure	SNOMED	Procedure	S	840566006	2020-07-31	2099-12-31	
+3667301	Blood specimen in aerobic blood culture bottle	Specimen	SNOMED	Specimen	S	866033003	2020-07-31	2099-12-31	
+3667306	Blood specimen in anaerobic blood culture bottle	Specimen	SNOMED	Specimen	S	866032008	2020-07-31	2099-12-31	
+3968670	Activities of daily living	Meas Value	LOINC	Answer	S	LA33512-7	1970-01-01	2099-12-31	
+3968814	Feeling anxious	Meas Value	LOINC	Answer	S	LA33518-4	1970-01-01	2099-12-31	
+4000611	Dried blood specimen	Specimen	SNOMED	Specimen	S	119294007	2002-01-31	2099-12-31	
+4000622	Erythrocyte specimen	Specimen	SNOMED	Specimen	S	119351004	2002-01-31	2099-12-31	
+4000626	Plasma specimen	Specimen	SNOMED	Specimen	S	119361006	2002-01-31	2099-12-31	
+4001179	Platelet specimen	Specimen	SNOMED	Specimen	S	119358005	2002-01-31	2099-12-31	
+4001181	Serum specimen	Specimen	SNOMED	Specimen	S	119364003	2002-01-31	2099-12-31	
+4001225	Blood specimen	Specimen	SNOMED	Specimen	S	119297000	2002-01-31	2099-12-31	
+4001226	Mixed venous blood specimen	Specimen	SNOMED	Specimen	S	119298005	2002-01-31	2099-12-31	
+4001330	Caudate nucleus structure	Spec Anatomic Site	SNOMED	Body Structure	S	11000004	2002-01-31	2099-12-31	
+4001346	Specimen from blood product	Specimen	SNOMED	Specimen	S	119300005	2002-01-31	2099-12-31	
+4001347	Specimen from blood bag	Specimen	SNOMED	Specimen	S	119304001	2002-01-31	2099-12-31	
+4001356	Fibroblast specimen	Specimen	SNOMED	Specimen	S	119333000	2002-01-31	2099-12-31	
+4002219	Menstrual blood specimen	Specimen	SNOMED	Specimen	S	119345009	2002-01-31	2099-12-31	
+4002884	Lymphocyte specimen	Specimen	SNOMED	Specimen	S	119353001	2002-01-31	2099-12-31	
+4002885	Polymorphonuclear neutrophil specimen	Specimen	SNOMED	Specimen	S	119355008	2002-01-31	2099-12-31	
+4002890	Tissue specimen	Specimen	SNOMED	Specimen	S	119376003	2002-01-31	2099-12-31	
+4004997	Difficulty eating	Observation	SNOMED	Clinical Finding	S	110292000	2002-01-31	2099-12-31	
+4011415	Design copyist	Observation	SNOMED	Social Context	S	159554005	2002-01-31	2099-12-31	
+4011951	Availability of	Observation	SNOMED	Qualifier Value	S	103328004	2002-01-31	2099-12-31	
+4012111	Difficulty writing	Condition	SNOMED	Clinical Finding	S	102938007	2002-01-31	2099-12-31	
+4012122	Sensation of hot and cold	Observation	SNOMED	Clinical Finding	S	103002009	2002-01-31	2099-12-31	
+4013576	Specimen volume measurement	Measurement	SNOMED	Procedure	S	103762001	2002-01-31	2099-12-31	
+4013636	Magnetic resonance imaging	Procedure	SNOMED	Procedure	S	113091000	2002-01-31	2099-12-31	
+4015311	Source specific culture	Measurement	SNOMED	Procedure	S	104190003	2002-01-31	2099-12-31	
+4016942	Nucleic acid enzymatic digestion method	Procedure	SNOMED	Procedure	S	104168003	2002-01-31	2099-12-31	
+4019097	Molecular genetics procedure	Procedure	SNOMED	Procedure	S	116148004	2002-01-31	2099-12-31	
+4019497	Specimen description	Procedure	SNOMED	Procedure	S	115267000	2002-01-31	2099-12-31	
+4025367	Genetic finding	Condition	SNOMED	Clinical Finding	S	106221001	2002-01-31	2099-12-31	
+4032248	Autopsy pathology procedure AND/OR service	Procedure	SNOMED	Procedure	S	108259003	2002-01-31	2099-12-31	
+4032250	Molecular biology method	Procedure	SNOMED	Procedure	S	108262000	2002-01-31	2099-12-31	
+4038568	Age at starting drinking	Observation	SNOMED	Observable Entity	S	228328008	2002-01-31	2099-12-31	
+4039368	Genetic screening, molecular method	Procedure	SNOMED	Procedure	S	118124000	2002-01-31	2099-12-31	
+4041436	Measurement finding	Measurement	SNOMED	Clinical Finding	S	118245000	2002-01-31	2099-12-31	
+4042135	Finding related to molecular sequence data	Condition	SNOMED	Clinical Finding	S	118205009	2002-01-31	2099-12-31	
+4043520	Shopping	Observation	SNOMED	Observable Entity	S	129011005	2002-01-31	2099-12-31	
+4044238	Excessive daytime sleepiness - normal night sleep	Condition	SNOMED	Disorder	S	230489007	2002-01-31	2099-12-31	
+4045667	Venous blood specimen	Specimen	SNOMED	Specimen	S	122555007	2002-01-31	2099-12-31	
+4045668	Blood specimen from blood product	Specimen	SNOMED	Specimen	S	122558009	2002-01-31	2099-12-31	
+4045670	Specimen from blood bag from patient	Specimen	SNOMED	Specimen	S	122563008	2002-01-31	2099-12-31	
+4045671	Specimen from blood bag from blood product	Specimen	SNOMED	Specimen	S	122564002	2002-01-31	2099-12-31	
+4045762	Leukocyte specimen from patient	Specimen	SNOMED	Specimen	S	122584003	2002-01-31	2099-12-31	
+4046276	Blood specimen from control	Specimen	SNOMED	Specimen	S	122559001	2002-01-31	2099-12-31	
+4046277	Blood specimen from patient	Specimen	SNOMED	Specimen	S	122561005	2002-01-31	2099-12-31	
+4046282	Erythrocyte specimen from blood donor	Specimen	SNOMED	Specimen	S	122581006	2002-01-31	2099-12-31	
+4046367	Serum specimen from blood product	Specimen	SNOMED	Specimen	S	122591000	2002-01-31	2099-12-31	
+4046833	Blood specimen obtained from umbilicus	Specimen	SNOMED	Specimen	S	122553000	2002-01-31	2099-12-31	
+4046834	Capillary blood specimen	Specimen	SNOMED	Specimen	S	122554006	2002-01-31	2099-12-31	
+4046835	Cord blood specimen	Specimen	SNOMED	Specimen	S	122556008	2002-01-31	2099-12-31	
+4046836	Cord blood specimen from fetus	Specimen	SNOMED	Specimen	S	122557004	2002-01-31	2099-12-31	
+4046841	Leukocyte specimen from control	Specimen	SNOMED	Specimen	S	122585002	2002-01-31	2099-12-31	
+4046932	Deep brain stimulation	Procedure	SNOMED	Procedure	S	230861003	2002-01-31	2099-12-31	
+4047495	Peripheral blood specimen	Specimen	SNOMED	Specimen	S	122551003	2002-01-31	2099-12-31	
+4047496	Arterial blood specimen	Specimen	SNOMED	Specimen	S	122552005	2002-01-31	2099-12-31	
+4047497	Blood specimen from blood donor	Specimen	SNOMED	Specimen	S	122560006	2002-01-31	2099-12-31	
+4048384	Body structure	Spec Anatomic Site	SNOMED	Body Structure	S	123037004	2002-01-31	2099-12-31	
+4048847	Blood specimen from newborn	Specimen	SNOMED	Specimen	S	122562003	2002-01-31	2099-12-31	
+4048851	Erythrocyte specimen from blood product	Specimen	SNOMED	Specimen	S	122582004	2002-01-31	2099-12-31	
+4048853	Serum specimen from blood donor	Specimen	SNOMED	Specimen	S	122589008	2002-01-31	2099-12-31	
+4048963	Writing	Observation	SNOMED	Observable Entity	S	12261009	2002-01-31	2099-12-31	
+4049904	Revised diagnosis	Observation	SNOMED	Qualifier Value	S	15874002	2002-01-31	2099-12-31	
+4050943	Family history with explicit context pertaining to aunt	Observation	SNOMED	Context-dependent	S	160464009	2002-01-31	2099-12-31	
+4051255	Family history with explicit context pertaining to mother	Observation	SNOMED	Context-dependent	S	160427003	2002-01-31	2099-12-31	
+4051256	Family history with explicit context pertaining to father	Observation	SNOMED	Context-dependent	S	160433007	2002-01-31	2099-12-31	
+4051258	Family history with explicit context pertaining to sister	Observation	SNOMED	Context-dependent	S	160439006	2002-01-31	2099-12-31	
+4051262	FH: Brother	Observation	SNOMED	Context-dependent	S	160444004	2002-01-31	2099-12-31	
+4051265	Family history with explicit context pertaining to uncle	Observation	SNOMED	Context-dependent	S	160465005	2002-01-31	2099-12-31	
+4052795	Family history with explicit context pertaining to son	Observation	SNOMED	Context-dependent	S	160449009	2002-01-31	2099-12-31	
+4052800	Family history with explicit context pertaining to maternal grandfather	Observation	SNOMED	Context-dependent	S	160460000	2002-01-31	2099-12-31	
+4052801	Family history with explicit context pertaining to paternal grandfather	Observation	SNOMED	Context-dependent	S	160461001	2002-01-31	2099-12-31	
+4052960	Mobile in home	Observation	SNOMED	Clinical Finding	S	160682003	2002-01-31	2099-12-31	
+4052962	Housebound	Observation	SNOMED	Clinical Finding	S	160689007	2002-01-31	2099-12-31	
+4053607	First degree blood relative	Relationship	SNOMED	Social Context	S	125678001	2002-01-31	2099-12-31	
+4054433	Family history with explicit context pertaining to daughter	Observation	SNOMED	Context-dependent	S	160454000	2002-01-31	2099-12-31	
+4064377	Depression screening	Measurement	SNOMED	Procedure	S	171207006	2002-01-31	2099-12-31	
+4065608	Division of brain tissue	Procedure	SNOMED	Procedure	S	21551002	2002-01-31	2099-12-31	
+4066291	Portal triaditis	Condition	SNOMED	Disorder	S	17349007	2002-01-31	2099-12-31	
+4070456	Specimen collection	Procedure	SNOMED	Procedure	S	17636008	2002-01-31	2099-12-31	
+4071771	Shave biopsy of skin	Procedure	SNOMED	Procedure	S	177346002	2002-01-31	2099-12-31	
+4074035	Current drinker	Observation	SNOMED	Clinical Finding	S	219006	2002-01-31	2099-12-31	
+4077974	Isolated visuospatial skills	Observation	SNOMED	Clinical Finding	S	276292009	2002-01-31	2099-12-31	
+4078510	Interpretation of results of psychiatric examinations and data	Procedure	SNOMED	Procedure	S	24621000	2002-01-31	2099-12-31	
+4080761	Right	Meas Value	SNOMED	Qualifier Value	S	24028007	2002-01-31	2099-12-31	
+4081731	Biopsy of skin	Procedure	SNOMED	Procedure	S	240977001	2002-01-31	2099-12-31	
+4085060	Fear of eating in public	Condition	SNOMED	Clinical Finding	S	247834003	2002-01-31	2099-12-31	
+4085401	Incision biopsy of skin	Procedure	SNOMED	Procedure	S	282014007	2002-01-31	2099-12-31	
+4086396	Periods of life	Meas Value	SNOMED	Qualifier Value	S	282032007	2002-01-31	2099-12-31	
+4086692	Imaging interpretation	Measurement	SNOMED	Observable Entity	S	282290005	2002-01-31	2099-12-31	
+4087703	Severe	Observation	SNOMED	Qualifier Value	S	24484000	2002-01-31	2099-12-31	
+4088611	Subscale score	Observation	SNOMED	Qualifier Value	S	280434008	2002-01-31	2099-12-31	
+4090183	Tanner boys genital development stage	Observation	SNOMED	Observable Entity	S	251805007	2002-01-31	2099-12-31	
+4090444	Summated scale score	Observation	SNOMED	Qualifier Value	S	280433002	2002-01-31	2099-12-31	
+4092272	Detailed recall of dream	Observation	SNOMED	Clinical Finding	S	247953009	2002-01-31	2099-12-31	
+4092843	Clinical laboratory specimen identification	Procedure	SNOMED	Procedure	S	18699002	2002-01-31	2099-12-31	
+4093835	Mental alertness	Observation	SNOMED	Observable Entity	S	248233002	2002-01-31	2099-12-31	
+4093857	Distribution of body fat	Observation	SNOMED	Observable Entity	S	248303006	2002-01-31	2099-12-31	
+4093975	Standing height	Measurement	SNOMED	Observable Entity	S	248333004	2002-01-31	2099-12-31	
+4096245	Resting tremor	Condition	SNOMED	Clinical Finding	S	25082004	2002-01-31	2099-12-31	
+4099909	Naming	Observation	SNOMED	Observable Entity	S	27468005	2002-01-31	2099-12-31	
+4100611	Finding of praxis	Condition	SNOMED	Clinical Finding	S	299734002	2002-01-31	2099-12-31	
+4101848	Repetition of words	Condition	SNOMED	Clinical Finding	S	28051002	2002-01-31	2099-12-31	
+4104285	Brain tissue	Observation	SNOMED	Substance	S	256865009	2002-01-31	2099-12-31	
+4105828	Red blood cell fluid specimen	Specimen	SNOMED	Specimen	S	256912003	2002-01-31	2099-12-31	
+4109860	Difficulty performing bathing activity	Observation	SNOMED	Clinical Finding	S	284802004	2002-01-31	2099-12-31	
+4110916	Selective abstraction	Observation	SNOMED	Clinical Finding	S	285246007	2002-01-31	2099-12-31	
+4110925	Difficulty dressing	Observation	SNOMED	Clinical Finding	S	284977008	2002-01-31	2099-12-31	
+4112230	First	Observation	SNOMED	Qualifier Value	S	255216001	2002-01-31	2099-12-31	
+4112996	Behavior ignored	Observation	SNOMED	Clinical Finding	S	284494004	2002-01-31	2099-12-31	
+4113167	Difficulty showering self	Observation	SNOMED	Clinical Finding	S	284796001	2002-01-31	2099-12-31	
+4113281	Fluctuating	Meas Value	SNOMED	Qualifier Value	S	255341006	2002-01-31	2099-12-31	
+4115458	Anterior	Observation	SNOMED	Qualifier Value	S	255549009	2002-01-31	2099-12-31	
+4116025	Difficulty participating in leisure activities	Observation	SNOMED	Clinical Finding	S	300742006	2002-01-31	2099-12-31	
+4117419	Blood film specimen	Specimen	SNOMED	Specimen	S	303248007	2002-01-31	2099-12-31	
+4119425	Non-surgical skin biopsy	Procedure	SNOMED	Procedure	S	287538006	2002-01-31	2099-12-31	
+4119529	Skin fibroblast specimen	Specimen	SNOMED	Specimen	S	258569003	2002-01-31	2099-12-31	
+4120355	Deoxyribonucleic acid specimen	Specimen	SNOMED	Specimen	S	258566005	2002-01-31	2099-12-31	
+4120752	Unable to communicate	Condition	SNOMED	Clinical Finding	S	288576002	2002-01-31	2099-12-31	
+4121977	Disease phases	Meas Value	SNOMED	Qualifier Value	S	303105007	2002-01-31	2099-12-31	
+4121980	Postmortem period	Meas Value	SNOMED	Qualifier Value	S	303113008	2002-01-31	2099-12-31	
+4122278	Amniotic cell specimen	Specimen	SNOMED	Specimen	S	258563002	2002-01-31	2099-12-31	
+4122283	Whole blood specimen	Specimen	SNOMED	Specimen	S	258580003	2002-01-31	2099-12-31	
+4122286	Buffy coat	Specimen	SNOMED	Specimen	S	258587000	2002-01-31	2099-12-31	
+4122287	White blood cell specimen	Specimen	SNOMED	Specimen	S	258591005	2002-01-31	2099-12-31	
+4123526	Able to perform copying activities	Observation	SNOMED	Clinical Finding	S	288448007	2002-01-31	2099-12-31	
+4124267	Postmortem tissue specimen	Specimen	SNOMED	Specimen	S	258484005	2002-01-31	2099-12-31	
+4124288	Clotted blood specimen	Specimen	SNOMED	Specimen	S	258581004	2002-01-31	2099-12-31	
+4124289	Blood clot specimen	Specimen	SNOMED	Specimen	S	258582006	2002-01-31	2099-12-31	
+4132546	Traumatic brain injury	Condition	SNOMED	Disorder	S	127295002	2002-01-31	2099-12-31	
+4132629	Family history taking	Procedure	SNOMED	Procedure	S	410551005	2004-07-31	2099-12-31	
+4132778	General clinical state	Observation	SNOMED	Observable Entity	S	278844005	2002-01-31	2099-12-31	
+4133058	Deep parotid lymph node	Spec Anatomic Site	SNOMED	Body Structure	S	279142004	2002-01-31	2099-12-31	
+4133684	Apolipoprotein E genotype determination	Measurement	SNOMED	Procedure	S	412985006	2004-07-31	2099-12-31	
+4134448	Tissue specimen from brain	Specimen	SNOMED	Specimen	S	128157004	2002-01-31	2099-12-31	
+4136441	Apolipoprotein E gene	Observation	SNOMED	Substance	S	412642004	2004-07-31	2099-12-31	
+4137157	Left sided	Observation	SNOMED	Qualifier Value	S	263795004	2002-01-31	2099-12-31	
+4138561	Language fluency	Observation	SNOMED	Observable Entity	S	32650004	2002-01-31	2099-12-31	
+4139244	Difficulty holding drinks	Observation	SNOMED	Clinical Finding	S	307071002	2002-01-31	2099-12-31	
+4140090	Parkinsonism	Condition	SNOMED	Disorder	S	32798002	2002-01-31	2099-12-31	
+4141311	Right sided	Observation	SNOMED	Qualifier Value	S	264180000	2002-01-31	2099-12-31	
+4142937	Nucleic acid analysis	Observation	SNOMED	Qualifier Value	S	264896000	2002-01-31	2099-12-31	
+4142947	Symptomatic	Meas Value	SNOMED	Qualifier Value	S	264931009	2002-01-31	2099-12-31	
+4145259	Patient registration data status	Observation	SNOMED	Clinical Finding	S	307825005	2002-01-31	2099-12-31	
+4145402	Surgical biopsy of skin	Procedure	SNOMED	Procedure	S	308000002	2002-01-31	2099-12-31	
+4147192	Feeling lonely	Observation	SNOMED	Clinical Finding	S	267076002	2002-01-31	2099-12-31	
+4147228	Chin structure	Spec Anatomic Site	SNOMED	Body Structure	S	30291003	2002-01-31	2099-12-31	
+4148886	Confidential patient data held	Observation	SNOMED	Clinical Finding	S	270456003	2002-01-31	2099-12-31	
+4149989	Speech problem	Condition	SNOMED	Clinical Finding	S	267095009	2002-01-31	2099-12-31	
+4150719	Digit span forwards	Observation	SNOMED	Clinical Finding	S	311407009	2002-01-31	2099-12-31	
+4150811	Ballooning degeneration	Observation	SNOMED	Morph Abnormality	S	3139003	2002-01-31	2099-12-31	
+4151627	Digit span reverse	Observation	SNOMED	Clinical Finding	S	311476004	2002-01-31	2099-12-31	
+4152620	Visual memory for faces	Observation	SNOMED	Observable Entity	S	283931007	2002-01-31	2099-12-31	
+4153379	Difficulty	Meas Value	SNOMED	Qualifier Value	S	371157007	2002-07-31	2099-12-31	
+4153980	Digit span performance	Observation	SNOMED	Observable Entity	S	283884005	2002-01-31	2099-12-31	
+4153990	Has delayed recall	Observation	SNOMED	Clinical Finding	S	283902008	2002-01-31	2099-12-31	
+4154448	Finding relating to immediate recall	Observation	SNOMED	Clinical Finding	S	283883004	2002-01-31	2099-12-31	
+4156190	Age values	Meas Value	SNOMED	Qualifier Value	S	272130008	2002-01-31	2099-12-31	
+4156367	Genotype types	Observation	SNOMED	Qualifier Value	S	272403009	2002-01-31	2099-12-31	
+4158475	Crying associated with mood	Observation	SNOMED	Clinical Finding	S	271951008	2002-01-31	2099-12-31	
+4158754	Serial sevens test	Measurement	SNOMED	Staging / Scales	S	273798003	2002-01-31	2099-12-31	
+4160039	Co-morbid conditions	Observation	SNOMED	Clinical Finding	S	398192003	2003-07-31	2099-12-31	
+4160510	Postmortem result	Condition	SNOMED	Clinical Finding	S	371758005	2002-07-31	2099-12-31	
+4162299	Autopsy examination	Procedure	SNOMED	Procedure	S	29240004	2002-01-31	2099-12-31	
+4162526	Nucleic acid assay	Measurement	SNOMED	Procedure	S	398545005	2003-07-31	2099-12-31	
+4162723	Cognitive function finding	Observation	SNOMED	Clinical Finding	S	373930000	2002-07-31	2099-12-31	
+4163138	Sample identification number	Observation	SNOMED	Observable Entity	S	372274003	2002-07-31	2099-12-31	
+4165596	Trail making test	Measurement	SNOMED	Staging / Scales	S	273882000	2002-01-31	2099-12-31	
+4165917	Has reason	Relationship	SNOMED	Linkage Assertion	S	416083004	2005-07-31	2099-12-31	
+4167194	Has problem member	Relationship	SNOMED	Linkage Assertion	S	416271009	2005-07-31	2099-12-31	
+4167217	Family history of clinical finding	Observation	SNOMED	Context-dependent	S	416471007	2005-07-31	2099-12-31	
+4169175	Mini-mental state examination	Measurement	SNOMED	Staging / Scales	S	273617000	2002-01-31	2099-12-31	
+4169312	Object naming test	Measurement	SNOMED	Staging / Scales	S	273656006	2002-01-31	2099-12-31	
+4170593	Dopamine receptor agonist	Observation	SNOMED	Substance	S	418222008	2006-01-31	2099-12-31	
+4172703	=	Meas Value Operator	SNOMED	Qualifier Value	S	276136004	2002-01-31	2099-12-31	
+4178502	Body weight measure	Measurement	SNOMED	Observable Entity	S	363808001	2002-01-31	2099-12-31	
+4181037	Genotype determination	Measurement	SNOMED	Procedure	S	363779003	2002-01-31	2099-12-31	
+4182334	Family history of Parkinson's disease	Observation	SNOMED	Context-dependent	S	297240003	2002-01-31	2099-12-31	
+4183166	Orientation	Observation	SNOMED	Observable Entity	S	43173001	2002-01-31	2099-12-31	
+4185711	Loss of sense of smell	Condition	SNOMED	Clinical Finding	S	44169009	2002-01-31	2099-12-31	
+4190307	Inflammatory disease of the central nervous system	Condition	SNOMED	Disorder	S	39367000	2002-01-31	2099-12-31	
+4195864	Attention	Observation	SNOMED	Observable Entity	S	6769007	2002-01-31	2099-12-31	
+4197342	Protease digestion of tissue specimen	Procedure	SNOMED	Procedure	S	433456006	2008-07-31	2099-12-31	
+4202677	Genetic investigation procedure	Procedure	SNOMED	Procedure	S	53973008	2002-01-31	2099-12-31	
+4202911	Core sampling of tissue block	Procedure	SNOMED	Procedure	S	434479002	2008-07-31	2099-12-31	
+4203251	Patient data status	Observation	SNOMED	Clinical Finding	S	308342008	2002-01-31	2099-12-31	
+4204989	Disturbance in sleep behavior	Observation	SNOMED	Clinical Finding	S	53888004	2002-01-31	2099-12-31	
+4205082	Ability to read	Observation	SNOMED	Observable Entity	S	309250007	2002-01-31	2099-12-31	
+4207631	Executive cognitive functions	Observation	SNOMED	Observable Entity	S	311507007	2002-01-31	2099-12-31	
+4208213	Excision biopsy of skin lesion	Procedure	SNOMED	Procedure	S	312968005	2002-01-31	2099-12-31	
+4210301	Autopsy diagnosis	Observation	SNOMED	Qualifier Value	S	5605004	2002-01-31	2099-12-31	
+4210464	Specimen preparation	Procedure	SNOMED	Procedure	S	56245008	2002-01-31	2099-12-31	
+4210989	Family history with explicit context	Observation	SNOMED	Context-dependent	S	57177007	2002-01-31	2099-12-31	
+4212327	Molecular sequence data	Condition	SNOMED	Clinical Finding	S	41482005	2002-01-31	2099-12-31	
+4214926	Has support	Relationship	SNOMED	Linkage Assertion	S	417569004	2005-07-31	2099-12-31	
+4215130	Neuropathology	Observation	SNOMED	Qualifier Value	S	394599008	2003-01-31	2099-12-31	
+4215467	Dream	Observation	SNOMED	Observable Entity	S	7175000	2002-01-31	2099-12-31	
+4215671	Is etiology for	Relationship	SNOMED	Linkage Assertion	S	416872009	2005-07-31	2099-12-31	
+4217996	Link assertion	Relationship	SNOMED	Linkage Assertion	S	416698001	2005-07-31	2099-12-31	
+4219090	Shave biopsy	Procedure	SNOMED	Procedure	S	72342005	2002-01-31	2099-12-31	
+4219281	Is manifestation of	Relationship	SNOMED	Linkage Assertion	S	417318003	2005-07-31	2099-12-31	
+4219702	Has problem name	Relationship	SNOMED	Linkage Assertion	S	416586004	2005-07-31	2099-12-31	
+4220533	Autopsy, gross examination with brain	Procedure	SNOMED	Procedure	S	82823006	2002-01-31	2099-12-31	
+4220753	Has explanation	Relationship	SNOMED	Linkage Assertion	S	417151001	2005-07-31	2099-12-31	
+4227359	When	Observation	SNOMED	Qualifier Value	S	420974001	2006-07-31	2099-12-31	
+4227695	Specimen aliquoting	Procedure	SNOMED	Procedure	S	4064007	2002-01-31	2099-12-31	
+4227733	Punch biopsy of skin	Procedure	SNOMED	Procedure	S	87697008	2002-01-31	2099-12-31	
+4227984	Awakening	Observation	SNOMED	Qualifier Value	S	421355008	2006-07-31	2099-12-31	
+4229575	Sleep behavior	Observation	SNOMED	Observable Entity	S	404950004	2004-01-31	2099-12-31	
+4229704	Ability to make coordinated movements	Observation	SNOMED	Observable Entity	S	404978003	2004-01-31	2099-12-31	
+4229760	Structure of putamen	Spec Anatomic Site	SNOMED	Body Structure	S	89278009	2002-01-31	2099-12-31	
+4231949	Cerebral degeneration due to Parkinson's disease	Condition	SNOMED	Disorder	S	438513002	2009-01-31	2099-12-31	
+4233623	Molecular genetic test	Measurement	SNOMED	Procedure	S	405825005	2004-01-31	2099-12-31	
+4234469	Diagnosis	Observation	SNOMED	Observable Entity	S	439401001	2009-01-31	2099-12-31	
+4235152	Special autopsy procedure, explain by report	Procedure	SNOMED	Procedure	S	90864005	2002-01-31	2099-12-31	
+4237017	Genetic test	Measurement	SNOMED	Procedure	S	405824009	2004-01-31	2099-12-31	
+4238978	Chronic lobular hepatitis	Condition	SNOMED	Disorder	S	57339008	2002-01-31	2099-12-31	
+4239427	Ability to think abstractly	Observation	SNOMED	Observable Entity	S	363878000	2002-01-31	2099-12-31	
+4243140	Specimen processing	Procedure	SNOMED	Procedure	S	9265001	2002-01-31	2099-12-31	
+4245997	Body mass index	Measurement	SNOMED	Observable Entity	S	60621009	2002-01-31	2099-12-31	
+4246074	Home care of patient	Observation	SNOMED	Procedure	S	60689008	2002-01-31	2099-12-31	
+4247506	Repetition of phrases	Condition	SNOMED	Clinical Finding	S	40628008	2002-01-31	2099-12-31	
+4258414	Epilepsy assessment	Procedure	SNOMED	Procedure	S	439248002	2009-01-31	2099-12-31	
+4259632	Organism	Observation	SNOMED	Organism	S	410607006	2004-07-31	2099-12-31	
+4260367	Dried blood spot specimen	Specimen	SNOMED	Specimen	S	440500007	2009-01-31	2099-12-31	
+4263778	Sleeptalking	Observation	SNOMED	Clinical Finding	S	36321004	2002-01-31	2099-12-31	
+4263971	Molecular testing, diagnostic	Procedure	SNOMED	Procedure	S	396927009	2003-07-31	2099-12-31	
+4264110	Immunophenotypic analysis result	Observation	SNOMED	Observable Entity	S	397003004	2003-07-31	2099-12-31	
+4264983	Specimen observable	Observation	SNOMED	Observable Entity	S	364708003	2002-01-31	2099-12-31	
+4265453	Age	Meas Value	SNOMED	Qualifier Value	S	397669002	2003-07-31	2099-12-31	
+4266361	Aggressive behavior	Observation	SNOMED	Clinical Finding	S	61372001	2002-01-31	2099-12-31	
+4266507	DNA analysis	Procedure	SNOMED	Procedure	S	62302004	2002-01-31	2099-12-31	
+4267143	Language	Observation	SNOMED	Observable Entity	S	61909002	2002-01-31	2099-12-31	
+4269026	Sample analysis	Procedure	SNOMED	Procedure	S	401096005	2003-07-31	2099-12-31	
+4274025	Disease	Condition	SNOMED	Disorder	S	64572001	2002-01-31	2099-12-31	
+4275889	Visual hallucinations	Condition	SNOMED	Clinical Finding	S	64269007	2002-01-31	2099-12-31	
+4284699	Tissue removed at necropsy	Observation	SNOMED	Clinical Finding	S	67135005	2002-01-31	2099-12-31	
+4287567	Punch biopsy	Procedure	SNOMED	Procedure	S	68660007	2002-01-31	2099-12-31	
+4288616	Amyloid deposition	Observation	SNOMED	Morph Abnormality	S	68790008	2002-01-31	2099-12-31	
+4290540	Collection of specimen for culture by laboratory	Procedure	SNOMED	Procedure	S	70347009	2002-01-31	2099-12-31	
+4293159	Brain region	Spec Anatomic Site	SNOMED	Body Structure	S	384763002	2003-01-31	2099-12-31	
+4296217	Generalized vitiligo	Condition	SNOMED	Disorder	S	403269008	2003-07-31	2099-12-31	
+4297376	Lightheadedness	Observation	SNOMED	Clinical Finding	S	386705008	2003-01-31	2099-12-31	
+4297704	Brodmann area	Spec Anatomic Site	SNOMED	Body Structure	S	384717008	2003-01-31	2099-12-31	
+4300877	Left	Meas Value	SNOMED	Qualifier Value	S	7771000	2002-01-31	2099-12-31	
+4300886	Exclude	Meas Value	SNOMED	Qualifier Value	S	77765009	2002-01-31	2099-12-31	
+4303425	Laboratory data interpretation	Procedure	SNOMED	Procedure	S	386344002	2003-01-31	2099-12-31	
+4303445	Research data collection	Observation	SNOMED	Procedure	S	386409003	2003-01-31	2099-12-31	
+4304008	Memory impairment	Condition	SNOMED	Clinical Finding	S	386807006	2003-01-31	2099-12-31	
+4304588	Unpleasant dream	Observation	SNOMED	Clinical Finding	S	419748005	2006-01-31	2099-12-31	
+4307859	Age at diagnosis	Observation	SNOMED	Observable Entity	S	423493009	2007-01-31	2099-12-31	
+4309357	Pure autonomic failure	Condition	SNOMED	Disorder	S	84438001	2002-01-31	2099-12-31	
+4310109	Body tissue structure	Spec Anatomic Site	SNOMED	Body Structure	S	85756007	2002-01-31	2099-12-31	
+4314734	Dementia associated with Parkinson's Disease	Condition	SNOMED	Disorder	S	425390006	2007-01-31	2099-12-31	
+4327116	Single photon emission computed tomography for dopamine transport	Procedure	SNOMED	Procedure	S	429781007	2008-01-31	2099-12-31	
+4327815	Feeling angry	Observation	SNOMED	Clinical Finding	S	75408008	2002-01-31	2099-12-31	
+4332526	Radionuclide imaging of brain using ioflupane (123-I)	Procedure	SNOMED	Procedure	S	430282003	2008-07-31	2099-12-31	
+4333894	Collection of forensic data	Observation	SNOMED	Procedure	S	432442004	2008-07-31	2099-12-31	
+4334496	Procedure on tissue specimen	Procedure	SNOMED	Procedure	S	430820001	2008-07-31	2099-12-31	
+4334627	Macroscopic tissue specimen	Specimen	SNOMED	Specimen	S	430861001	2008-07-31	2099-12-31	
+4335087	Sampling of tissue specimen	Procedure	SNOMED	Procedure	S	433465004	2008-07-31	2099-12-31	
+4337543	Hepatic necrosis	Condition	SNOMED	Disorder	S	87248009	2002-01-31	2099-12-31	
+21492138	Resource identifier [URI] for Study	Observation	LOINC	Clinical Observation	S	78200-3	2016-06-24	2099-12-31	
+21492218	Clock drawing panel [GPCOG]	Observation	LOINC	Survey	S	79150-9	2016-06-24	2099-12-31	
+21493003	Unique identifier for Current sample	Measurement	LOINC	Lab Test	S	80398-1	2016-06-24	2099-12-31	
+21498325	Caudal	Meas Value	LOINC	Answer	S	LA25384-1	1970-01-01	2099-12-31	
+35624671	Unit of measure	Unit	SNOMED	Qualifier Value		767524001	2018-07-31	2099-12-31	
+35626265	First encounter by subject	Observation	SNOMED	Clinical Finding	S	769681006	2018-07-31	2099-12-31	
+35626941	Sleep related movement disorder	Condition	SNOMED	Disorder	S	84991000119105	2018-07-31	2099-12-31	
+35810233	Alcohol intake versus 10 years previously	Observation	UK Biobank	Question	S	1628	2012-01-05	2099-12-31	
+35810326	Number of cigarettes previously smoked daily	Observation	UK Biobank	Question	S	2887	2012-01-05	2099-12-31	
+35810373	Number of cigarettes currently smoked daily (current cigarette smokers)	Observation	UK Biobank	Question	S	3456	2012-01-05	2099-12-31	
+35811099	Amount of alcohol drunk on a typical drinking day	Observation	UK Biobank	Question	S	20403	2016-10-25	2099-12-31	
+35811110	Frequency of drinking alcohol	Observation	UK Biobank	Question	S	20414	2016-10-25	2099-12-31	
+35811112	Frequency of consuming six or more units of alcohol	Observation	UK Biobank	Question	S	20416	2016-10-25	2099-12-31	
+35814574	Data problem indicator	Observation	UK Biobank	Variable	S	90002	2013-11-27	2099-12-31	
+35814582	Data quality, calibrated on own data	Observation	UK Biobank	Variable	S	90017	2015-11-06	2099-12-31	
+35815526	Age at event	Observation	UK Biobank	Value	S	14--4	2012-02-20	2099-12-31	
+35822165	Parkinson's disease	Observation	UK Biobank	Answer	S	1010-11	2012-10-05	2099-12-31	
+35953767	APOE (apolipoprotein E) gene variant measurement	Measurement	OMOP Genomic	Genetic Variation	S	613	2001-06-22	2099-12-31	
+36031310	Education completion status	Observation	LOINC	Clinical Observation	S	96394-2	2020-12-15	2099-12-31	
+36031408	Age when stopped substance abuse	Observation	LOINC	Clinical Observation	S	96102-9	2020-12-15	2099-12-31	
+36032879	Embarrassment	Meas Value	LOINC	Answer	S	LA31438-7	1970-01-01	2099-12-31	
+36210180	Parkinson's disease	Meas Value	LOINC	Answer	S	LA27533-1	1970-01-01	2099-12-31	
+36303222	APOE e4/e4	Meas Value	LOINC	Answer	S	LA21360-5	1970-01-01	2099-12-31	
+36303625	Preliminary testing result Specimen	Measurement	LOINC	Clinical Observation	S	86953-7	2018-06-15	2099-12-31	
+36304515	Mothers Source of information	Observation	LOINC	Survey	S	87291-1	2018-06-15	2099-12-31	
+36307526	APOE e2/e2	Meas Value	LOINC	Answer	S	LA21356-3	1970-01-01	2099-12-31	
+36307729	APOE e4	Meas Value	LOINC	Answer	S	LA21355-5	1970-01-01	2099-12-31	
+36308038	APOE e2	Meas Value	LOINC	Answer	S	LA21353-0	1970-01-01	2099-12-31	
+36308097	At home	Meas Value	LOINC	Answer	S	LA27446-6	1970-01-01	2099-12-31	
+36308156	APOE e2/e4	Meas Value	LOINC	Answer	S	LA21361-3	1970-01-01	2099-12-31	
+36310377	APOE e2/e3	Meas Value	LOINC	Answer	S	LA21357-1	1970-01-01	2099-12-31	
+36311054	APOE e3/e4	Meas Value	LOINC	Answer	S	LA21359-7	1970-01-01	2099-12-31	
+36311224	New disease diagnosis	Meas Value	LOINC	Answer	S	LA28310-3	1970-01-01	2099-12-31	
+36660247	Specimen Processing comment	Measurement	LOINC	Lab Test	S	94330-8	2020-06-17	2099-12-31	
+36684875	Restless legs syndrome rating scale	Measurement	SNOMED	Staging / Scales	S	457921000124102	2018-09-01	2099-12-31	
+36685552	Unified Parkinson's Disease Rating Scale total points	Observation	SNOMED	Observable Entity	S	1099221000000108	2018-10-01	2099-12-31	
+36714126	Difficulty walking	Observation	SNOMED	Clinical Finding	S	719232003	2017-01-31	2099-12-31	
+36717874	Pre-membrane lung blood specimen	Specimen	OMOP Extension	Specimen	S	OMOP5386063	2024-02-25	2099-12-31	
+36717875	Post-membrane lung blood specimen	Specimen	OMOP Extension	Specimen	S	OMOP5386064	2024-02-25	2099-12-31	
+36770058	Right	Measurement	Cancer Modifier	Topography	S	OMOP4999736	2020-09-23	2099-12-31	
+36770494	Occipital Brain	Measurement	Cancer Modifier	Topography	S	OMOP5000174	2020-09-23	2099-12-31	
+36770562	Middle	Measurement	Cancer Modifier	Topography	S	OMOP5000242	2020-09-23	2099-12-31	
+37020654	Age when stopped smoking cigarettes completely	Observation	LOINC	Clinical Observation	S	92659-2	2019-06-21	2099-12-31	
+37021329	Specimen condition [Type]	Measurement	LOINC	Lab Test	S	93047-9	2019-06-21	2099-12-31	
+37116939	First specimen	Observation	SNOMED	Qualifier Value	S	733986001	2017-07-31	2099-12-31	
+37153131	Caffeine intake	Observation	SNOMED	Observable Entity	S	1208604004	2022-03-31	2099-12-31	
+37155361	Whole blood specimen with edetic acid	Specimen	SNOMED	Specimen	S	57921000052103	2022-02-28	2099-12-31	
+37156628	Structure of Brodmann area 11, prefrontal	Spec Anatomic Site	SNOMED	Body Structure	S	1179059003	2021-10-31	2099-12-31	
+37158808	Chief complaint	Observation	SNOMED	Observable Entity	S	1269489004	2023-04-30	2099-12-31	
+37164572	Stem cell specimen	Specimen	SNOMED	Specimen	S	57731000052104	2022-02-28	2099-12-31	
+37165296	Excisional biopsy of skin	Procedure	SNOMED	Procedure	S	1251630002	2022-09-30	2099-12-31	
+37172639	Type of tobacco used	Observation	SNOMED	Observable Entity	S	53661000146106	2022-11-30	2099-12-31	
+37206841	Unstained slide of tissue section	Specimen	SNOMED	Specimen	S	787149001	2019-07-31	2099-12-31	
+37206842	Stained slide of tissue section	Specimen	SNOMED	Specimen	S	787150001	2019-07-31	2099-12-31	
+37206849	Preparation of large size formalin fixed paraffin embedded tissue specimen	Procedure	SNOMED	Procedure	S	787375008	2019-07-31	2099-12-31	
+37303842	Plasma specimen or serum specimen or whole blood specimen	Specimen	SNOMED	Specimen	S	788707000	2020-01-31	2099-12-31	
+37397738	Anatomy reference area	Spec Anatomic Site	SNOMED	Body Structure	S	718478002	2016-07-31	2099-12-31	
+37397776	Apolipoprotein E genotype	Measurement	SNOMED	Observable Entity	S	991601000000105	2016-04-01	2099-12-31	
+37399698	Genotype	Measurement	SNOMED	Observable Entity	S	1028331000000101	2016-04-01	2099-12-31	
+37522778	UPD2-Movements Interfere Ratings	Observation	CDISC	Observable Entity		C100534-UPD2DB	2023-12-01	2099-12-31	
+37524576	UPD2-Hallucinations and Psychosis	Observation	CDISC	Observable Entity		C100474-UPD2102	2023-12-01	2099-12-31	
+37525031	UPD2-Kinetic Tremor of Right Hand	Observation	CDISC	Observable Entity		C113883-UPD2316A	2023-12-01	2099-12-31	
+37525797	MMS1-What Is the Building	Observation	CDISC	Observable Entity		C100552-MMS102D	2023-12-01	2099-12-31	
+37526631	UPD2-Ftrs Dopa Dysregulation Synd	Observation	CDISC	Observable Entity		C100478-UPD2106	2023-12-01	2099-12-31	
+37527310	UPD2-Urinary Problems	Observation	CDISC	Observable Entity		C100482-UPD2110	2023-12-01	2099-12-31	
+37528823	MMS1-What Is the City/Town	Observation	CDISC	Observable Entity		C100551-MMS102C	2023-12-01	2099-12-31	
+37529643	UPD2-Kinetic Tremor of Left Hand	Observation	CDISC	Observable Entity		C100526-UPD2316B	2023-12-01	2099-12-31	
+37529830	UPD2-Clinical State on Meds	Observation	CDISC	Observable Entity		C100499-UPD23B	2023-12-01	2099-12-31	
+37529918	UPD1--Motor:Action Tremor:Hand: Right	Observation	CDISC	Observable Entity		C111590-UPD121A	2023-12-01	2099-12-31	
+37530368	MMS1-What Is the Floor	Observation	CDISC	Observable Entity		C100553-MMS102E	2023-12-01	2099-12-31	
+37531414	Age Unit	Observation	CDISC	Observable Entity		C50400-AGEU	2023-12-01	2099-12-31	
+37531553	UPD2-Get Out of Bed/Car/Deep Chair	Observation	CDISC	Observable Entity		C101018-UPD2211	2023-12-01	2099-12-31	
+37533080	UPD2-Constipation Problems	Observation	CDISC	Observable Entity		C100483-UPD2111	2023-12-01	2099-12-31	
+37533563	UPD2-Eating Tasks	Observation	CDISC	Observable Entity		C100489-UPD2204	2023-12-01	2099-12-31	
+37533961	UPD2-Right Toe Tapping	Observation	CDISC	Observable Entity		C100515-UPD2307A	2023-12-01	2099-12-31	
+37534195	MMS1-What Is the County	Observation	CDISC	Observable Entity		C100550-MMS102B	2023-12-01	2099-12-31	
+37535098	UPD1--Motor:Action Tremor:Hand: Left	Observation	CDISC	Observable Entity		C111591-UPD121B	2023-12-01	2099-12-31	
+37535522	MMS1-What Is the Date	Observation	CDISC	Observable Entity		C100545-MMS101E	2023-12-01	2099-12-31	
+37535672	UPD2-Doing Hobbies/Other Activities	Observation	CDISC	Observable Entity		C100493-UPD2208	2023-12-01	2099-12-31	
+37535976	UPD2-Fatigue	Observation	CDISC	Observable Entity		C100485-UPD2113	2023-12-01	2099-12-31	
+37537147	UPD2-Left Toe Tapping	Observation	CDISC	Observable Entity		C100516-UPD2307B	2023-12-01	2099-12-31	
+37537169	MDS-UPDRS	Observation	CDISC	Observable Entity		C100769	2023-12-01	2099-12-31	
+37538536	MMS1-What Is the State	Observation	CDISC	Observable Entity		C100549-MMS102A	2023-12-01	2099-12-31	
+37539837	Study Visit Window	Observation	CDISC	Observable Entity		C191215	2023-12-01	2099-12-31	
+37542726	Study Visit	Observation	CDISC	Social Context		C191214	2023-12-01	2099-12-31	
+37542948	CALCULATION	Observation	CDISC	Procedure		C54125	2023-12-01	2099-12-31	
+37543244	UPD2-Anxious Mood	Observation	CDISC	Observable Entity		C100476-UPD2104	2023-12-01	2099-12-31	
+37544810	UPD2-Medication for PD	Observation	CDISC	Observable Entity		C100498-UPD23A	2023-12-01	2099-12-31	
+37546165	UPD2-Consistency of Rest Tremor	Observation	CDISC	Observable Entity		C100532-UPD2318	2023-12-01	2099-12-31	
+37546244	UPD2-Rest Tremor Amplitude LUE	Observation	CDISC	Observable Entity		C100528-UPD2317B	2023-12-01	2099-12-31	
+37550305	FSIL-Bothered by Vitiligo	Measurement	CDISC	Staging / Scales		C184036-FSIL0419	2023-12-01	2099-12-31	
+37550978	PDQ-39	Measurement	CDISC	Staging / Scales		C187514	2023-12-01	2099-12-31	
+37551141	RBDSQ	Measurement	CDISC	Staging / Scales		C187517	2023-12-01	2099-12-31	
+38003563	Hispanic or Latino	Ethnicity	Ethnicity	Ethnicity	S	Hispanic	1970-01-01	2099-12-31	
+38003564	Not Hispanic or Latino	Ethnicity	Ethnicity	Ethnicity	S	Not Hispanic	1970-01-01	2099-12-31	
+38004225	Ambulatory Genetics Clinic / Center	Visit	NUCC	Visit	S	261QG0250X	1970-01-01	2099-12-31	
+38004259	Ambulatory Research Clinic / Center	Visit	NUCC	Visit	S	261QR1100X	1970-01-01	2099-12-31	
+38004264	Ambulatory Sleep Disorder Diagnostic Clinic / Center	Visit	NUCC	Visit	S	261QS1200X	1970-01-01	2099-12-31	
+38004294	Clinical Medical Laboratory	Visit	NUCC	Visit	S	291U00000X	1970-01-01	2099-12-31	
+38004296	Physiological Laboratory	Visit	NUCC	Visit	S	293D00000X	1970-01-01	2099-12-31	
+38004305	Alzheimer Nursing Center (Dementia Center)	Visit	NUCC	Visit	S	311500000X	1970-01-01	2099-12-31	
+38004440	Respite Care	Visit	NUCC	Visit	S	385H00000X	1970-01-01	2099-12-31	
+38004697	Slide Preparation Facility	Visit	Medicare Specialty	Visit	S	75	1970-01-01	2099-12-31	
+40479189	Fresh tissue specimen	Specimen	SNOMED	Specimen	S	441479001	2009-07-31	2099-12-31	
+40479555	Blood specimen with anticoagulant	Specimen	SNOMED	Specimen	S	441510007	2009-07-31	2099-12-31	
+40479563	Lymphoblastoid cell line specimen	Specimen	SNOMED	Specimen	S	441518000	2009-07-31	2099-12-31	
+40480027	Formalin-fixed paraffin-embedded tissue specimen	Specimen	SNOMED	Specimen	S	441652008	2009-07-31	2099-12-31	
+40480050	Ribonucleic acid specimen	Specimen	SNOMED	Specimen	S	441673008	2009-07-31	2099-12-31	
+40482425	Periodic leg movements of sleep	Condition	SNOMED	Clinical Finding	S	445140006	2010-07-31	2099-12-31	
+40482922	Blood specimen with EDTA	Specimen	SNOMED	Specimen	S	445295009	2010-07-31	2099-12-31	
+40483839	Age at onset of clinical finding	Observation	SNOMED	Observable Entity	S	445518008	2010-07-31	2099-12-31	
+40486473	Blood specimen obtained for blood culture	Specimen	SNOMED	Specimen	S	446131002	2011-01-31	2099-12-31	
+40486989	Blood specimen submitted in heparinized collection tube	Specimen	SNOMED	Specimen	S	446272009	2011-01-31	2099-12-31	
+40489396	Diffusion tractography	Procedure	SNOMED	Procedure	S	448307005	2011-07-31	2099-12-31	
+40490382	BMI (body mass index) centile	Measurement	SNOMED	Observable Entity	S	446974000	2011-01-31	2099-12-31	
+40491528	Nucleic acid specimen	Specimen	SNOMED	Specimen	S	448789008	2011-07-31	2099-12-31	
+40546087	Depressed mood	Observation	SNOMED	Clinical Finding	S	366979004	2009-07-31	2099-12-31	
+40757633	Assessment/tracking type	Observation	LOINC	Survey	S	54502-0	2009-01-20	2099-12-31	
+40758337	DNA analysis discrete sequence variation panel	Measurement	LOINC	Lab Test	S	55208-3	2009-03-19	2099-12-31	
+40758361	Genetic analysis summary panel	Observation	LOINC	Lab Test	S	55232-3	2009-03-23	2099-12-31	
+40758362	Genetic analysis master panel	Measurement	LOINC	Lab Test	S	55233-1	1970-01-01	2099-12-31	
+40760162	Living arrangements	Observation	LOINC	Survey	S	57043-2	2009-09-01	2099-12-31	
+40761009	Age of Specimen	Measurement	LOINC	Lab Test	S	57900-3	2009-11-18	2099-12-31	
+40764451	Does your health now limit you in walking one hundred yards [PROMIS]	Observation	LOINC	Survey	S	61690-4	2010-10-28	2099-12-31	
+40765101	Cells analyzed [#]	Measurement	LOINC	Lab Test	S	62360-3	2010-12-02	2099-12-31	
+40765292	PhenX - tobacco - age of initiation of use - adolescent protocol 030701	Measurement	LOINC	Clinical Observation	S	62556-6	2010-12-29	2099-12-31	
+40766306	Smoked at least 100 cigarettes in entire life	Observation	LOINC	Clinical Observation	S	63581-3	2011-03-02	2099-12-31	
+40766358	About how old were you when you first started drinking, not counting small tastes or sips of alcohol [PhenX]	Observation	LOINC	Clinical Observation	S	63634-0	2011-03-03	2099-12-31	
+40766591	For how many hours per day were you exposed to smoke from other peoples cigarettes or tobacco products during this time at this location [PhenX]	Observation	LOINC	Clinical Observation	S	63870-0	2011-03-15	2099-12-31	
+40766593	At the present time, how many hours per day are you exposed to the smoke of others [PhenX]	Observation	LOINC	Clinical Observation	S	63872-6	2011-03-15	2099-12-31	
+40766621	Current age or age at death	Observation	LOINC	Clinical Observation	S	63900-5	2011-03-15	2099-12-31	
+40766651	Date of diagnosis	Observation	LOINC	Clinical Observation	S	63931-0	2011-03-15	2099-12-31	
+40766652	Age at diagnosis	Observation	LOINC	Clinical Observation	S	63932-8	2011-03-15	2099-12-31	
+40766656	Start date of treatment or therapy	Observation	LOINC	Clinical Observation	S	63936-9	2011-03-15	2099-12-31	
+40766819	Baseline time	Observation	LOINC	Clinical Observation	S	64103-5	2011-03-31	2099-12-31	
+40766930	On the average of the entire time you smoked, how many cigarettes did you smoke per day [PhenX]	Observation	LOINC	Clinical Observation	S	64219-9	2011-04-13	2099-12-31	
+40767217	Have you ever seen your child wake up with a snorting sound [PhenX]	Observation	LOINC	Clinical Observation	S	64509-3	2011-04-20	2099-12-31	
+40768259	How often do you remember your dreams - that is, dreams that occur during your regular sleep and not while napping [PhenX]	Observation	LOINC	Clinical Observation	S	65565-4	2011-05-02	2099-12-31	
+40768319	Do you ever move so much during your sleep that you accidentally hit your bed partner, if any, or hurt yourself? [PhenX]	Observation	LOINC	Clinical Observation	S	65627-2	2011-05-02	2099-12-31	
+40768384	Finger taps - right [UPDRS]	Observation	LOINC	Clinical Observation	S	65695-9	2011-05-05	2099-12-31	
+40768385	Finger taps - left [UPDRS]	Observation	LOINC	Clinical Observation	S	65696-7	2011-05-05	2099-12-31	
+40768386	Hand movements - right [UPDRS]	Observation	LOINC	Clinical Observation	S	65697-5	2011-05-05	2099-12-31	
+40768387	Hand movements - left [UPDRS]	Observation	LOINC	Clinical Observation	S	65698-3	2011-05-05	2099-12-31	
+40768390	Leg agility - right [UPDRS]	Observation	LOINC	Clinical Observation	S	65701-5	2011-05-05	2099-12-31	
+40768391	Leg agility - left [UPDRS]	Observation	LOINC	Clinical Observation	S	65702-3	2011-05-05	2099-12-31	
+40768392	Arising from chair [UPDRS]	Observation	LOINC	Clinical Observation	S	65703-1	2011-05-05	2099-12-31	
+40768393	Posture [UPDRS]	Observation	LOINC	Clinical Observation	S	65704-9	2011-05-05	2099-12-31	
+40768394	Gait - parkinsons [UPDRS]	Observation	LOINC	Clinical Observation	S	65705-6	2011-05-05	2099-12-31	
+40768395	Postural stability - retropulsion test [UPDRS]	Observation	LOINC	Clinical Observation	S	65706-4	2011-05-05	2099-12-31	
+40768499	Body bradykinesia - hypokinesia [UPDRS]	Observation	LOINC	Clinical Observation	S	65811-2	2011-05-11	2099-12-31	
+40768719	Tremor at rest Upper extremity - right [UPDRS]	Measurement	LOINC	Clinical Observation	S	66035-7	2011-05-19	2099-12-31	
+40768720	Postural tremor Upper extremity - right [UPDRS]	Measurement	LOINC	Clinical Observation	S	66036-5	2011-05-19	2099-12-31	
+40768721	Rigidity Neck [UPDRS]	Measurement	LOINC	Clinical Observation	S	66037-3	2011-05-19	2099-12-31	
+40768722	Speech [UPDRS]	Observation	LOINC	Clinical Observation	S	66038-1	2011-05-19	2099-12-31	
+40768723	Facial expression [UPDRS]	Observation	LOINC	Clinical Observation	S	66039-9	2011-05-19	2099-12-31	
+40768724	Tremor at rest Face [UPDRS]	Measurement	LOINC	Clinical Observation	S	66040-7	2011-05-19	2099-12-31	
+40768870	Tremor at rest Upper extremity - left [UPDRS]	Measurement	LOINC	Clinical Observation	S	66189-2	2011-06-03	2099-12-31	
+40768871	Tremor at rest Lower extremity - right [UPDRS]	Measurement	LOINC	Clinical Observation	S	66190-0	2011-06-03	2099-12-31	
+40768872	Tremor at rest Lower extremity - left [UPDRS]	Measurement	LOINC	Clinical Observation	S	66191-8	2011-06-03	2099-12-31	
+40768873	Rigidity Upper extremity - right [UPDRS]	Measurement	LOINC	Clinical Observation	S	66192-6	2011-06-03	2099-12-31	
+40768874	Rigidity Upper extremity - left [UPDRS]	Measurement	LOINC	Clinical Observation	S	66193-4	2011-06-03	2099-12-31	
+40768875	Rigidity Lower extremity - right [UPDRS]	Measurement	LOINC	Clinical Observation	S	66194-2	2011-06-03	2099-12-31	
+40768876	Rigidity Lower extremity - left [UPDRS]	Measurement	LOINC	Clinical Observation	S	66195-9	2011-06-03	2099-12-31	
+40768877	Postural tremor Upper extremity - left [UPDRS]	Measurement	LOINC	Clinical Observation	S	66196-7	2011-06-03	2099-12-31	
+40768976	Participant [Identifier]	Observation	LOINC	Clinical Observation	S	66302-1	2011-06-09	2099-12-31	
+40769095	Main presenting symptom [PhenX]	Observation	LOINC	Clinical Observation	S	66422-7	2011-06-14	2099-12-31	
+40769338	History of Diabetes (regardless of treatment) [PhenX]	Observation	LOINC	Clinical Observation	S	66678-4	2011-06-21	2099-12-31	
+40769406	Specimen type	Measurement	LOINC	Lab Test	S	66746-9	2011-06-22	2099-12-31	
+40770510	Neuro-Qol short form - stigma - version 1.0	Observation	LOINC	Survey	S	67914-2	2011-08-31	2099-12-31	
+40771103	How often do you have a drink containing alcohol	Observation	LOINC	Clinical Observation	S	68518-0	2011-09-28	2099-12-31	
+40771104	How many standard drinks containing alcohol do you have on a typical day	Observation	LOINC	Clinical Observation	S	68519-8	2011-09-28	2099-12-31	
+40771985	Ethnicity OMB.1997	Observation	LOINC	Clinical Observation	S	69490-1	2011-11-16	2099-12-31	
+42528764	Years of education [#] - Reported	Observation	LOINC	Clinical Observation	S	82590-1	2017-02-21	2099-12-31	
+42528933	Trial enrollment date	Observation	LOINC	Clinical Observation	S	82778-2	2017-02-21	2099-12-31	
+42528934	Participant identifier	Observation	LOINC	Clinical Observation	S	82787-3	2017-02-21	2099-12-31	
+42531079	Needs assistance	Meas Value	LOINC	Answer	S	LA26596-9	1970-01-01	2099-12-31	
+42537141	Impaired executive functioning	Condition	SNOMED	Clinical Finding	S	736317001	2018-01-31	2099-12-31	
+42537789	Fetal blood specimen	Specimen	SNOMED	Specimen	S	737357006	2018-01-31	2099-12-31	
+42537871	Blood smear specimen	Specimen	SNOMED	Specimen	S	737535000	2018-01-31	2099-12-31	
+42628334	Post mortem	Observation	CPT4	CPT4 Modifier	S	PM	2017-05-08	2099-12-31	
+42689795	Injury whilst sleeping	Condition	SNOMED	Disorder	S	1068421000000100	2017-04-01	2099-12-31	
+42710046	Cramp in lower leg	Condition	SNOMED	Clinical Finding	S	449918009	2012-01-31	2099-12-31	
+42739580	Multiple Procedures	Observation	CPT4	CPT4 Modifier	S	51	1970-01-01	2099-12-31	
+42739591	Repeat Procedure or Service by Same Physician or Other Qualified Health Care Professional	Procedure	CPT4	CPT4 Modifier	S	76	1970-01-01	2099-12-31	
+42739976	Repeat clinical diagnostic laboratory test	Measurement	CPT4	CPT4 Modifier	S	91	1970-01-01	2099-12-31	
+42869860	Total score [MMSE]	Observation	LOINC	Survey	S	72106-8	2012-09-14	2099-12-31	
+42869861	Mini-Mental State Examination [MMSE]	Observation	LOINC	Survey	S	72107-6	2012-09-14	2099-12-31	
+42870053	I have trouble getting around in public places in the past 7 days [FACIT]	Observation	LOINC	Survey	S	71109-3	2012-03-15	2099-12-31	
+42872633	Biopsy of lesion of skin of neck	Procedure	SNOMED	Procedure	S	450624004	2012-07-31	2099-12-31	
+42872634	Biopsy of lesion of skin of head	Procedure	SNOMED	Procedure	S	450625003	2012-07-31	2099-12-31	
+43054876	Montreal Cognitive Assessment [MoCA]	Observation	LOINC	Survey	S	72133-2	2012-12-28	2099-12-31	
+43054909	Tobacco smoking status	Observation	LOINC	Clinical Observation	S	72166-2	2012-12-28	2099-12-31	
+43054915	Total score [MoCA]	Observation	LOINC	Survey	S	72172-0	2012-12-28	2099-12-31	
+43528862	Are you currently prescribed medications and/or receiving treatment for Parkinson's disease?	Observation	PPI	Question	S	NervousSystem_RxMedsforParkinsonsDisease	2022-04-07	2099-12-31	
+43528875	Are you currently prescribed medications and/or receiving treatment for sleep apnea?	Observation	PPI	Question	S	Respiratory_RxMedsforSleepApnea	2022-04-07	2099-12-31	
+43530525	About how old were you when you were first told you had dementia (includes Alzheimer's, vascular, etc.)?	Observation	PPI	Question	S	NervousSystem_HowOldWereYouDementia	2022-04-07	2099-12-31	
+43530536	About how old were you when you were first told you had Parkinson's disease?	Observation	PPI	Question	S	NervousSystem_HowOldWereYouParkinsonsDisease	2022-04-07	2099-12-31	
+43534097	Specimen source [Identifier] of Synovial fluid	Measurement	LOINC	Lab Test	S	72923-6	2013-01-25	2099-12-31	
+44782422	Dementia due to Parkinson's disease	Condition	SNOMED	Disorder	S	101421000119107	2014-01-31	2099-12-31	
+44783492	Structure of anatomical compartment	Spec Anatomic Site	SNOMED	Body Structure	S	699590003	2014-01-31	2099-12-31	
+44786481	Documentation that patient is a current tobacco user	Observation	HCPCS	HCPCS	S	G9276	2014-01-01	2099-12-31	
+44786599	Post mortem	Observation	HCPCS	HCPCS Modifier	S	PM	2014-01-01	2099-12-31	
+44786669	Lifetime tobacco use	Observation	LOINC	Clinical Observation	S	74011-8	2013-08-05	2099-12-31	
+44786670	Number of years alcohol consumed [Time]	Observation	LOINC	Clinical Observation	S	74012-6	2013-07-23	2099-12-31	
+44788656	Problem link	Relationship	SNOMED	Linkage Assertion	S	181311000000101	2005-07-31	2099-12-31	
+44791422	Specimen analysis	Procedure	SNOMED	Procedure	S	285141000000102	2007-04-02	2099-12-31	
+44792078	Patient registration data verified	Observation	SNOMED	Clinical Finding	S	314191000000103	2008-04-01	2099-12-31	
+44797771	Clinical Outcomes in Routine Evaluation Outcome Measure	Measurement	SNOMED	Staging / Scales	S	312971000000109	2008-04-01	2099-12-31	
+44803831	Data	Observation	SNOMED	Qualifier Value	S	722991000000101	2010-10-01	2099-12-31	
+44803907	Research project	Observation	SNOMED	Qualifier Value	S	723331000000105	2010-10-01	2099-12-31	
+44803968	Ethnicity	Observation	SNOMED	Qualifier Value	S	723621000000103	2010-10-01	2099-12-31	
+44804112	Questionnaire	Observation	SNOMED	Qualifier Value	S	719091000000102	2010-10-01	2099-12-31	
+44804212	Case control study	Observation	SNOMED	Qualifier Value	S	719561000000104	2010-10-01	2099-12-31	
+44804279	Data analysis	Observation	SNOMED	Qualifier Value	S	719641000000101	2010-10-01	2099-12-31	
+44806420	Estimation of glomerular filtration rate	Measurement	SNOMED	Procedure	S	791801000000102	2011-10-03	2099-12-31	
+44806863	Cell sample	Specimen	SNOMED	Specimen	S	803291000000106	2011-10-03	2099-12-31	
+44808037	Gene expression assay	Procedure	SNOMED	Procedure	S	827951000000109	2012-04-01	2099-12-31	
+44808076	Whole blood specimen with heparin	Specimen	SNOMED	Specimen	S	838971000000104	2012-10-01	2099-12-31	
+44808077	Whole blood specimen with fluoride oxalate	Specimen	SNOMED	Specimen	S	838981000000102	2012-10-01	2099-12-31	
+44808078	Whole blood specimen with perchlorate	Specimen	SNOMED	Specimen	S	838991000000100	2012-10-01	2099-12-31	
+44808081	Post mortem sample	Observation	SNOMED	Clinical Finding	S	839021000000109	2012-10-01	2099-12-31	
+44808183	Post mortem specimen collection	Procedure	SNOMED	Procedure	S	839481000000102	2012-10-01	2099-12-31	
+44808666	Montreal cognitive assessment	Measurement	SNOMED	Staging / Scales	S	859351000000102	2013-04-01	2099-12-31	
+44808819	Sterile defibrinated blood specimen	Specimen	SNOMED	Specimen	S	842471000000105	2012-10-01	2099-12-31	
+44809105	Referral to Parkinson's service	Observation	SNOMED	Procedure	S	862081000000106	2013-04-01	2099-12-31	
+44809997	Psoriasis area and severity index	Measurement	SNOMED	Staging / Scales	S	866311000000102	2013-04-01	2099-12-31	
+44810921	Research study follow-up	Observation	SNOMED	Procedure	S	871421000000100	2013-04-01	2099-12-31	
+44816633	Health data repository [Identifier]	Observation	LOINC	Clinical Observation	S	74735-2	2014-05-27	2099-12-31	
+44818756	Has specimen (SNOMED)	Metadata	Relationship	Relationship		OMOP generated	1970-01-01	2099-12-31	
+44818775	Has specimen procedure (SNOMED)	Metadata	Relationship	Relationship		OMOP generated	1970-01-01	2099-12-31	
+44818854	Specimen of (SNOMED)	Metadata	Relationship	Relationship		OMOP generated	1970-01-01	2099-12-31	
+44818873	Specimen procedure of (SNOMED)	Metadata	Relationship	Relationship		OMOP generated	1970-01-01	2099-12-31	
+45766301	Arterial cord blood specimen	Specimen	SNOMED	Specimen	S	703430008	2014-07-31	2099-12-31	
+45766302	Venous cord blood specimen	Specimen	SNOMED	Specimen	S	703431007	2014-07-31	2099-12-31	
+45770404	Pre-assessment questionnaire completed	Observation	SNOMED	Context-dependent	S	927941000000103	2014-10-01	2099-12-31	
+45770633	No family history of Parkinson's disease	Observation	SNOMED	Context-dependent	S	932441000000109	2014-10-01	2099-12-31	
+45770695	Everyday Cognition questionnaire completed	Observation	SNOMED	Clinical Finding	S	934111000000106	2014-10-01	2099-12-31	
+45771438	Lack of family support	Observation	SNOMED	Clinical Finding	S	704489009	2015-01-31	2099-12-31	
+45773156	Specimen source	Observation	SNOMED	Observable Entity	S	703065002	2014-07-31	2099-12-31	
+45875957	Documents panels	Observation	LOINC	LOINC Class	C	PANEL.DOC	1970-01-01	2099-12-31	
+45876867	Positive response to neuroleptics	Meas Value	LOINC	Answer	S	LA14927-0	1970-01-01	2099-12-31	
+45877115	Difficulty with buttons/zippers	Meas Value	LOINC	Answer	S	LA15043-5	1970-01-01	2099-12-31	
+45877868	At risk	Meas Value	LOINC	Answer	S	LA19952-3	1970-01-01	2099-12-31	
+45877986	Unknown	Meas Value	LOINC	Answer	S	LA4489-6	1970-01-01	2099-12-31	
+45878370	Dx at Autopsy	Meas Value	LOINC	Answer	S	LA3934-2	1970-01-01	2099-12-31	
+45880188	Your ancestry or national origin	Meas Value	LOINC	Answer	S	LA15574-9	1970-01-01	2099-12-31	
+45882732	At work	Meas Value	LOINC	Answer	S	LA16593-8	1970-01-01	2099-12-31	
+45883143	Left	Meas Value	LOINC	Answer	S	LA4585-1	1970-01-01	2099-12-31	
+45884169	Baseline	Meas Value	LOINC	Answer	S	LA16758-7	1970-01-01	2099-12-31	
+45884746	Hospitalization	Meas Value	LOINC	Answer	S	LA15417-1	1970-01-01	2099-12-31	
+45935481	Reason for not enrolling in clinical trial or study	Observation	CIEL	Question		162701	2014-11-10	2099-12-31	
+46233680	Patient moved to	Relationship	Relationship	Relationship	S	OMOP5217062	1970-01-01	2099-12-31	
+46233681	Patient moved from	Relationship	Relationship	Relationship	S	OMOP5217063	1970-01-01	2099-12-31	
+46233682	Diastolic to systolic blood pressure measurement	Relationship	Relationship	Relationship	S	OMOP5217064	1970-01-01	2099-12-31	
+46233683	Systolic to diastolic blood pressure measurement	Relationship	Relationship	Relationship	S	OMOP5217065	1970-01-01	2099-12-31	
+46233684	Relevant condition of	Relationship	Relationship	Relationship	S	OMOP5217066	1970-01-01	2099-12-31	
+46233685	Condition relevant to	Relationship	Relationship	Relationship	S	OMOP5217067	1970-01-01	2099-12-31	
+46233688	Care Site is part of Care Site	Relationship	Relationship	Relationship	S	OMOP5217068	1970-01-01	2099-12-31	
+46233689	Care Site contains Care Site	Relationship	Relationship	Relationship	S	OMOP5217069	1970-01-01	2099-12-31	
+46235134	Information source for data [PCORnet]	Observation	LOINC	Survey	S	75521-5	2015-06-29	2099-12-31	
+46235144	Enrollment basis	Observation	LOINC	Survey	S	75531-4	2014-11-21	2099-12-31	
+46235213	Sex assigned at birth	Observation	LOINC	Clinical Observation	S	76689-9	2015-03-13	2099-12-31	
+46235847	Age at event onset	Observation	LOINC	Clinical Observation	S	75272-5	2014-12-10	2099-12-31	
+46235855	Sequence number in substance administration series	Observation	LOINC	Clinical Observation	S	75280-8	2014-11-11	2099-12-31	
+46236232	Data collected	Observation	LOINC	Survey	S	77544-5	2015-05-20	2099-12-31	
+46236376	Intellectual impairment scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77686-4	2015-06-12	2099-12-31	
+46236377	Thought disorder scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77687-2	2015-06-12	2099-12-31	
+46236378	Depression scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77688-0	2015-06-12	2099-12-31	
+46236379	Motivation or initiative scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77689-8	2015-06-12	2099-12-31	
+46236380	Speech scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77690-6	2015-06-12	2099-12-31	
+46236381	Salivation scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77691-4	2015-06-12	2099-12-31	
+46236382	Swallowing scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77692-2	2015-06-12	2099-12-31	
+46236383	Handwriting scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77693-0	2015-06-12	2099-12-31	
+46236384	Utensils scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77694-8	2015-06-12	2099-12-31	
+46236385	Dressing scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77695-5	2015-06-12	2099-12-31	
+46236386	Hygiene scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77696-3	2015-06-12	2099-12-31	
+46236387	Turning in bed and adjusting bed clothes scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77697-1	2015-06-12	2099-12-31	
+46236388	Fall scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77698-9	2015-06-12	2099-12-31	
+46236389	Walking freeze scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77699-7	2015-06-12	2099-12-31	
+46236390	Walking scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77700-3	2015-06-12	2099-12-31	
+46236391	Tremor scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77701-1	2015-06-12	2099-12-31	
+46236392	Sensory complaints related to parkinsonism scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77702-9	2015-06-12	2099-12-31	
+46236393	Dyskinesia duration per day in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77703-7	2015-06-12	2099-12-31	
+46236394	Dyskinesia disability in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77704-5	2015-06-12	2099-12-31	
+46236395	Dyskinesia pain in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77705-2	2015-06-12	2099-12-31	
+46236396	Early morning dystonia in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77706-0	2015-06-12	2099-12-31	
+46236397	Predictable off period indicator in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77707-8	2015-06-12	2099-12-31	
+46236398	Unpredictable off period indicator in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77708-6	2015-06-12	2099-12-31	
+46236399	Sudden off period indicator in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77709-4	2015-06-12	2099-12-31	
+46236400	Average proportion of waking day the patient is off in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77710-2	2015-06-12	2099-12-31	
+46236401	Patient has anorexia, nausea or vomiting in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77711-0	2015-06-12	2099-12-31	
+46236402	Sleep disturbances indicator in the past week [UPDRS]	Observation	LOINC	Clinical Observation	S	77712-8	2015-06-12	2099-12-31	
+46236404	Modified Hoen and Yahr stage [UPDRS]	Observation	LOINC	Clinical Observation	S	77714-4	2015-06-12	2099-12-31	
+46236405	Schwab England activities of daily living scale [UPDRS]	Measurement	LOINC	Clinical Observation	S	77715-1	2015-06-12	2099-12-31	
+46236408	Mentation, behavior and mood panel [UPDRS]	Measurement	LOINC	Clinical Observation	S	77718-5	2015-06-12	2099-12-31	
+46236410	Motor examination panel [UPDRS]	Measurement	LOINC	Clinical Observation	S	77720-1	2015-06-12	2099-12-31	
+46236412	Dyskinesias panel [UPDRS]	Measurement	LOINC	Clinical Observation	S	77722-7	2015-06-12	2099-12-31	
+46236413	Clinical fluctuations panel [UPDRS]	Measurement	LOINC	Clinical Observation	S	77723-5	2015-06-12	2099-12-31	
+46236967	Age at time of case investigation	Observation	LOINC	Survey	S	77998-3	2015-06-17	2099-12-31	
+46238155	Vivid dreaming	Meas Value	LOINC	Answer	S	LA23558-2	1970-01-01	2099-12-31	
+46270236	Frozen tissue section specimen	Specimen	SNOMED	Specimen	S	16214131000119104	2015-07-31	2099-12-31	
+46273534	Epworth Sleepiness Scale	Measurement	SNOMED	Staging / Scales	S	708735004	2015-07-31	2099-12-31	
+46286521	Current View Provisional Problem Description item 23 - peer relationship difficulties	Measurement	SNOMED	Staging / Scales	S	987041000000105	2015-10-01	2099-12-31	
+2000000101	assay.assay_id	Metadata	CDM Extension	Field		assay.assay_id			
+2000000102	file_asset.file_asset_id	Metadata	CDM Extension	Field		file_asset.file_asset_id			
